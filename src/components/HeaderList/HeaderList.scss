@@ -1,0 +1,29 @@
+@import "../../style/variables.css";
+
+@media screen and (max-width: 1024px) {
+  .header__list {
+    font-size: 16px;
+  }
+}
+
+.header__list {
+  flex-grow: 5;
+  display: flex;
+  justify-content: space-around;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 29px;
+  z-index: 6;
+
+  color: #ffffff;
+
+  .header__list_item {
+    display: flex;
+    align-items: center;
+    margin: 0 3%;
+    img {
+      margin-right: 10px;
+    }
+  }
+}

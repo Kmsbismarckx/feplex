@@ -1,0 +1,50 @@
+@import "../../style/variables.css";
+
+@media screen and (max-width: 766px) {
+  .online-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 178.84px;
+    background: url("/public/media/online-info-background.png") no-repeat bottom -2px
+      center;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .online-info__online {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 52.886px;
+      line-height: 150.84%;
+      color: #ffffff;
+      text-align: center;
+    }
+    .online-info__text {
+      position: relative;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 22.0358px;
+      line-height: 150.84%;
+      color: #ffffff;
+      margin: 35.73px;
+    }
+    .online-info__text::after {
+      content: url("/public/media/green-dot.svg");
+      position: absolute;
+      top: 0;
+      right: -15.95px;
+    }
+    .online-info__button {
+      width: 246.04px;
+      height: 56.18px;
+      .button__text {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 15.3777px;
+        line-height: 19px;
+      }
+    }
+  }
+}

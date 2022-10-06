@@ -1,0 +1,45 @@
+@import "style/variables.css";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(180deg, #c18e08 0%, #bd570e 100%);
+  font-family: "Montserrat", sans-serif;
+}
+
+.App {
+  padding-top: 70px;
+  background: url("/public/media/pc-sword1.png") no-repeat top 38px right 154px,
+    url("/public/media/pc-sword2.png") no-repeat top 216px left 43px,
+    url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px,
+    url("/public/media/pc-background1.png") no-repeat top 328px right 41px,
+    url("/public/media/background2.png") no-repeat top 531px left -296px;
+
+  background-size: auto, auto, auto, auto, auto;
+}
+
+@media screen and (max-width: 766px) {
+  .App {
+    padding-top: 35px;
+    background: url("/public/media/sword1.png") no-repeat right top 238px,
+      url("/public/media/sword-blur.png") no-repeat left top 500px,
+      url("/public/media/background1.png") no-repeat center top 347px, none;
+    background-size: auto, auto, 135%;
+  }
+}
+
+.blur {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  backdrop-filter: blur(12.5px);
+}

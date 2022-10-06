@@ -1,0 +1,50 @@
+@import "../../style/variables.css";
+.donation-pc__container {
+  max-width: 1580px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.donation-pc {
+  background: linear-gradient(180deg, #9c4b28 0%, #4a200e 105.16%);
+  box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
+  border-radius: 49.7748px;
+  padding: 55px 135px 0;
+}
+.donation-pc .donation-pc__header {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 49px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 33.766px;
+  line-height: 41px;
+  color: #ffffff;
+}
+.donation-pc .donation-pc__header .donation-pc__header_nickname {
+  display: flex;
+  align-items: center;
+  flex-grow: 8;
+}
+.donation-pc .donation-pc__header .donation-pc__header_goods {
+  display: flex;
+  justify-content: space-between;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 24px;
+  flex-grow: 4;
+}
+.donation-pc .donation-pc__header .donation-pc__header_goods .donation-pc__header_goods_item {
+  border: 5px solid #572611;
+  border-radius: 36px;
+  padding: 20px 26px;
+}
+.donation-pc .donation-pc__footer {
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+/*# sourceMappingURL=DonationPC.css.map */
