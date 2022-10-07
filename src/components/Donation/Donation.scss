@@ -1,100 +1,230 @@
 @import "../../style/variables.css";
+.donation-container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
 
 .donation {
-  position: relative;
   display: flex;
-  flex-direction: column;
-  color: white;
+  justify-content: space-between;
+  align-items: center;
 
+  color: white;
   background: linear-gradient(180deg, #9c4b28 0%, #4a200e 100%);
   box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
   border-radius: 49.7748px;
 
-  min-width: 350px;
-  max-width: 407.5px;
+  width: 100%;
+  height: 406.97px;
   margin: 0 auto;
-  padding: 36px;
-
-  .donation__name {
-    display: flex;
-    margin-bottom: 23.38px;
-    .donation__name_img {
-      margin-right: 14.32px;
+  .donation__header {
+    width: 480px;
+    margin-left: 100px;
+    flex-grow: 2;
+    .donation__name {
+      display: flex;
+      margin-bottom: 23.38px;
+      .donation__name_img {
+        margin-right: 14.32px;
+      }
     }
-  }
-  .donation__input_wrapper {
-    position: relative;
-    width: 100%;
-    height: 55.48px;
-    background: #994927;
-    border-radius: 34.9334px;
-    margin-bottom: 38.44px;
-    .donation__input {
+    .donation__input_wrapper {
+      position: relative;
       width: 100%;
+      height: 55.48px;
+      background: #ffffff;
+      box-shadow: 0 13px 10px rgba(0, 0, 0, 0.54);
+      border-radius: 50px;
+      margin-bottom: 38.44px;
+      .donation__background4 {
+        position: absolute;
+        top: 76.86px;
+        left: -62.15px;
+      }
+      .donation__input {
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        padding: 0 55.48px 0 75.31px;
+        background-color: inherit;
+        border: none;
+        border-radius: 50px;
+        color: black;
+      }
+      .donation__input::placeholder {
+        color: #2d2d2d;
+      }
+    }
+    .donation__input_wrapper::before {
+      content: url("/public/media/man-icon.svg");
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 61px;
       height: 100%;
-      z-index: 2;
-      padding: 0 55.48px 0 75.31px;
-      background-color: inherit;
+      top: 0;
+      left: -3px;
+      background: #532410;
       border: none;
-      border-radius: 34.9334px;
-      color: white;
+      border-bottom-left-radius: inherit;
+      border-top-left-radius: inherit;
     }
-    .donation__input::placeholder {
-      color: white;
+
+    .donation__input_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: absolute;
+      width: 55.48px;
+      height: 55.48px;
+      top: 0;
+      right: 0;
     }
-  }
-  .donation__input_wrapper::before {
-    content: url("/public/media/man-icon.svg");
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 60.71px;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #532410;
-    border-bottom-left-radius: 34.9334px;
-    border-top-left-radius: 34.9334px;
   }
 
-  .donation__input_button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    width: 55.48px;
-    height: 55.48px;
-    top: 0px;
-    right: 0;
-  }
-  .donation__chest {
+  .donation__footer {
+    width: 318px;
+    height: 318px;
     align-self: center;
-    z-index: 2;
+    position: relative;
+    margin-right: 149px;
+    margin-top: 40px;
+    .donation__chest {
+      position: absolute;
+      top: 0;
+      left: 0;
+      align-self: center;
+      z-index: 2;
+    }
+    .donation__background {
+      position: absolute;
+    }
+    .donation__background1 {
+      top: -27.33px;
+      left: -0.43px;
+      z-index: 3;
+    }
+    .donation__background2 {
+      bottom: -21.74px;
+      left: -67.98px;
+    }
+    .donation__background3 {
+      top: 5.85px;
+      right: -10.41px;
+      z-index: 1;
+    }
+    .donation__background5 {
+      right: -35.73px;
+      bottom: 3.91px;
+    }
   }
-  .donation__background {
-    position: absolute;
-  }
-  .donation__background1 {
-    top: 156.05px;
-    left: 113.14px;
-    z-index: 3;
-  }
-  .donation__background2 {
-    left: 54.95px;
-    bottom: 8.05px;
-  }
-  .donation__background3 {
-    top: 189.24px;
-    left: 260.3px;
-  }
-  .donation__background4 {
-    top: 189.24px;
-    left: 34.14px;
-    transform: rotate(-28deg);
-  }
-  .donation__background5 {
-    left: 270.77px;
-    bottom: 33.7px;
+}
+
+@media screen and (max-width: 1024px) {
+  .donation {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: start;
+    color: white;
+
+    background: linear-gradient(180deg, #9c4b28 0%, #4a200e 100%);
+    box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
+    border-radius: 49.7748px;
+
+    min-width: 350px;
+    max-width: 407.5px;
+    height: auto;
+    margin: 0 auto;
+    padding: 36px;
+    .donation__header {
+      flex-grow: 0;
+      margin-left: 0;
+      width: 100%;
+      .donation__name {
+        display: flex;
+        margin-bottom: 23.38px;
+        .donation__name_img {
+          margin-right: 14.32px;
+        }
+      }
+      .donation__input_wrapper {
+        position: relative;
+        width: 100%;
+        height: 55.48px;
+        background: #994927;
+        border-radius: 34.9334px;
+        margin-bottom: 38.44px;
+        box-shadow: none;
+        .donation__background4 {
+          position: absolute;
+          top: 100px;
+          left: 0;
+        }
+        .donation__input {
+          width: 100%;
+          height: 100%;
+          z-index: 2;
+          padding: 0 55.48px 0 75.31px;
+          background-color: inherit;
+          border: none;
+          border-radius: 34.9334px;
+          color: white;
+        }
+        .donation__input::placeholder {
+          color: white;
+        }
+      }
+      .donation__input_wrapper::before {
+        content: url("/public/media/man-icon.svg");
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 60.71px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: #532410;
+        border-bottom-left-radius: 34.9334px;
+        border-top-left-radius: 34.9334px;
+      }
+
+      .donation__input_button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        width: 55.48px;
+        height: 55.48px;
+        top: 0;
+        right: 0;
+      }
+    }
+
+    .donation__footer {
+      flex-grow: 1;
+      width: 193px;
+      height: 193px;
+      align-self: center;
+      position: relative;
+      margin-right: 0;
+      .donation__background2 {
+        bottom: -21.74px;
+        left: -67.98px;
+      }
+      .donation__background3 {
+        top: 5.85px;
+        right: -10.41px;
+        z-index: 1;
+      }
+
+      .donation__background5 {
+        right: -35.73px;
+        bottom: 3.91px;
+      }
+    }
   }
 }

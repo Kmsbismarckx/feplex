@@ -1,0 +1,97 @@
+@import "../../style/variables.css";
+.donation-pc__footer_item {
+  background: #572611;
+  border-radius: 29.8137px;
+}
+.donation-pc__footer_item .line {
+  background: #7b4025;
+  height: 2px;
+  border: none;
+}
+.donation-pc__footer_item .donation-pc__footer_item_header {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  height: 96px;
+}
+.donation-pc__footer_item .donation-pc__footer_item_header .donation-pc__footer_item_header_img {
+  position: absolute;
+  left: 34px;
+  top: -32px;
+  width: auto;
+  height: auto;
+  border-radius: 39.1837px;
+  overflow: hidden;
+}
+.donation-pc__footer_item .donation-pc__footer_item_header p {
+  padding-left: 140px;
+  text-align: center;
+  align-self: center;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28.7625px;
+  line-height: 35px;
+  color: #ffffff;
+}
+.donation-pc__footer_item .donation-pc__footer_item_footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 11px;
+  padding-bottom: 15px;
+}
+.donation-pc__footer_item .donation-pc__footer_item_footer .donation-pc__footer_item_footer_item {
+  margin-bottom: 17.88px;
+}
+.donation-pc__footer_item .donation-pc__footer_item_footer .donation-pc__footer_item_footer_item h2 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 19.3109px;
+  line-height: 24px;
+  color: #ffffff;
+}
+.donation-pc__footer_item .donation-pc__footer_item_footer .donation-pc__footer_item_footer_item p {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15.45px;
+  line-height: 18.83px;
+  color: #ffffff;
+}
+.donation-pc__footer_item .donation-pc__footer_item_footer .donation-pc__footer_item_footer_item:last-of-type {
+  margin-bottom: 11px;
+}
+.donation-pc__footer_item .donation-pc__footer_item_footer .donation-pc__footer_item_button {
+  width: 104px;
+  height: 40px;
+  background: white;
+  box-shadow: none;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 17.0364px;
+  line-height: 21px;
+}
+
+.donation-special {
+  background-color: #181818;
+}
+.donation-special .line {
+  background: #111111;
+  border: none;
+}
+.donation-special .donation-pc__footer_item_header p {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 24.4834px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.donation-special .donation-pc__footer_item_header p:after {
+  content: attr(data-text);
+  transform: translateX(-100%);
+  position: absolute;
+  background: linear-gradient(180deg, #c18e08 0%, #bd570e 100%);
+  background-clip: text;
+  color: transparent;
+}
+
+/*# sourceMappingURL=DonationItem.css.map */

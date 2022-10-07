@@ -10,8 +10,9 @@
   background: linear-gradient(180deg, #9c4b28 0%, #4a200e 105.16%);
   box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
   border-radius: 49.7748px;
-  padding: 55px 135px 0;
-
+  padding: 55px 8% 93px;
+  margin-right: 10px;
+  margin-left: 10px;
 
   .donation-pc__header {
     display: flex;
@@ -44,12 +45,28 @@
         border-radius: 36px;
         padding: 20px 26px;
       }
+      .active {
+        border: 5px solid transparent;
+        background: #fba454;
+        border-radius: 36px;
+        padding: 20px 26px;
+      }
     }
+  }
+
+  hr {
+    height: 2.3px;
+    border: none;
+    background: #5e2a13;
   }
 
   .donation-pc__footer {
     display: grid;
+    grid-template-columns: repeat(auto-fill, 303px);
+    column-gap: 30px;
+    row-gap: 60px;
     justify-content: center;
     align-items: center;
+    margin-top: 65px;
   }
 }

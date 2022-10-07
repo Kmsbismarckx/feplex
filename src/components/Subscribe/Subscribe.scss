@@ -1,40 +1,94 @@
 @import "../../style/variables.css";
 
-@media screen and (max-width: 766px) {
-  .subscribe {
-    padding-top: 320px;
+.subscribe {
+  position: relative;
+  padding-top: 142px;
+  padding-bottom: 61.3px;
+  background: url("/public/media/pc-subscribe-background.png") no-repeat top
+      74.38px left,
+    url("/public/media/pc-subscribe-background.png") no-repeat top 96.38px right -60px,
+    url("/public/media/pc-subscribe-background-blur.png") no-repeat top 74.38px
+      center;
+
+  background-size: auto, auto, auto;
+  .container {
+    display: flex;
+    align-items: center;
+  }
+  .subscribe__background {
+    margin-top: 42px;
     position: relative;
-    margin-bottom: 61.3px;
-    .subscribe__background {
-      .subscribe__background_item {
-        position: absolute;
+    .subscribe__background_item:first-child,
+    .subscribe__background_item:last-child {
+      position: absolute;
+    }
+    .subscribe__background_item:first-child {
+      left: -65.77px;
+      top: 2.27px;
+      z-index: 3;
+    }
+    .subscribe__background_item:nth-child(2) {
+      z-index: 2;
+    }
+    .subscribe__background_item:last-child {
+      top: 85.25px;
+      right: -41px;
+    }
+  }
+  .subscribe__description {
+    margin-left: 16.57px;
+    .subscribe__description_name {
+      font-style: normal;
+      font-weight: 700;
+      font-size: 36px;
+      line-height: 55px;
+      color: white;
+      margin-bottom: 10.42px;
+      span {
+        display: inline-block;
+        padding: 5.84px 17.71px 5.99px 17.62px;
+        background: #ffffff;
+        border-radius: 8.09242px;
+        color: #572611;
       }
-      .subscribe__background_item1 {
-        top: 42.01px;
-        left: 56.92px;
-        z-index: 2;
-      }
-      .subscribe__background_item2 {
-        top: 44.28px;
-        left: 0;
-        z-index: 3;
-      }
-      .subscribe__background_item3 {
-        top: 127.26px;
-        right: 55.55px;
-      }
-      .subscribe__background_item4 {
-        top: 0;
-        left: 0px;
-      }
-      .subscribe__background_item5 {
-        top: 324.97px;
-        right: 0;
-      }
-      .subscribe__background_item6 {
-        top: 0;
-        right: 0;
-      }
+    }
+  }
+  .subscribe__description_details {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 150.84%;
+    color: #e3e3e3;
+    margin-bottom: 23.76px;
+  }
+}
+.subscribe__button {
+  margin-left: 16.57px;
+  width: fit-content;
+  padding: 24px 50px 37px;
+  .button__text {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 25px;
+    line-height: 30px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .subscribe {
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 61.3px;
+    background: url("/public/media/subscribe-item5.png") no-repeat top 324.97px
+        right,
+      url("/public/media/subscribe-item4.png") no-repeat top left,
+      url("/public/media/subscribe-item6.png") no-repeat top right;
+
+    background-size: auto, auto, auto, auto, auto;
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .subscribe__description {
       margin-left: 16.57px;
@@ -66,6 +120,7 @@
   .subscribe__button {
     margin-left: 16.57px;
     width: 249px;
+    padding: 15px 30px 22px;
     height: 56.85px;
     .button__text {
       font-style: normal;

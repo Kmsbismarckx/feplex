@@ -4,6 +4,7 @@ import React, { useState } from "react";
 import { useMatchMedia } from "./hooks/useMatchMedia";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import General from "./pages/General";
+import DonationPC from "./components/DonationPC/DonationPC";
 
 function App() {
   const { isMobile } = useMatchMedia();
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<General />} />
             <Route path="/general" element={<General />} />
+            <Route path="/general/:nick" element={<General />}></Route>
           </Routes>
         </globalContext.Provider>
       </Router>
