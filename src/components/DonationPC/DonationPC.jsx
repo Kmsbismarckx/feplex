@@ -11,6 +11,8 @@ const DonationPc = ({
   donationItems,
   setDonationItems,
   isMobile,
+  modal,
+  setModal,
 }) => {
   const { nick } = useParams();
   return (
@@ -23,6 +25,7 @@ const DonationPc = ({
           setCategories={setCategories}
           donationItems={donationItems}
           setDonationItems={setDonationItems}
+          isMobile={isMobile}
         />
         {!isMobile && <hr />}
         {isMobile ? (
@@ -31,11 +34,11 @@ const DonationPc = ({
               {donationItems.map((item) => {
                 return (
                   <DonationItem
-                    key={item.value}
                     className={"donation-pc__footer_item"}
-                    imgSrc={item.imgSrc}
-                    specialClass={item.specialClass}
-                    dataText={item.dataText}
+                    key={item.value}
+                    item={item}
+                    modal={modal}
+                    setModal={setModal}
                   >
                     {item.value}
                   </DonationItem>
@@ -54,11 +57,11 @@ const DonationPc = ({
             {donationItems.map((item) => {
               return (
                 <DonationItem
-                  key={item.value}
                   className={"donation-pc__footer_item"}
-                  imgSrc={item.imgSrc}
-                  specialClass={item.specialClass}
-                  dataText={item.dataText}
+                  key={item.value}
+                  item={item}
+                  modal={modal}
+                  setModal={setModal}
                 >
                   {item.value}
                 </DonationItem>

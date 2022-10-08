@@ -1,4 +1,6 @@
 import React from "react";
+import Category from "../UI/Category/Category";
+import { categoryActive } from "../../functions/categoryActive";
 
 const DonationHeader = ({
   className,
@@ -6,37 +8,34 @@ const DonationHeader = ({
   categories,
   setCategories,
   setDonationItems,
+  isMobile,
 }) => {
   return (
     <div className={`${className}__header`}>
       <div className={`${className}__header_nickname`}>
-        <img src="/media/buy-icon.svg" alt="" />
+        {isMobile ? (
+          <img src="/media/man-icon-large.svg" alt="" />
+        ) : (
+          <img src="/media/buy-icon.svg" alt="" />
+        )}
+
         <p>{nick}</p>
       </div>
       <div className={`${className}__header_goods`}>
         {categories.map((category, index) => {
           return (
-            <div
+            <Category
               key={category.name}
-              className={`${className}__header_goods_item ${category.active}`}
+              className={`${className}__header_goods_item ${
+                category.isSelected && "active"
+              }`}
               onClick={() => {
-                setCategories([
-                  ...categories.map((item, i) => {
-                    if (i === index) {
-                      item.isSelected = true;
-                      item.active = "active";
-                    } else {
-                      item.isSelected = false;
-                      item.active = "";
-                    }
-                    return item;
-                  }),
-                ]);
+                setCategories(categoryActive(index, categories));
                 setDonationItems(category.data);
               }}
             >
               {category.name}
-            </div>
+            </Category>
           );
         })}
       </div>

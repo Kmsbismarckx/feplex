@@ -41,20 +41,11 @@
         top: 76.86px;
         left: -62.15px;
       }
-      .donation__input {
-        width: 100%;
-        height: 100%;
-        z-index: 2;
-        padding: 0 55.48px 0 75.31px;
-        background-color: inherit;
-        border: none;
-        border-radius: 50px;
-        color: black;
-      }
       .donation__input::placeholder {
         color: #2d2d2d;
       }
     }
+
     .donation__input_wrapper::before {
       content: url("/public/media/man-icon.svg");
       display: flex;

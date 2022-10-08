@@ -1,0 +1,36 @@
+@import "../../style/variables.css";
+
+.start-item {
+  position: relative;
+  background-repeat: no-repeat !important;
+  background-position: top 50px left 0 !important;
+  color: white;
+
+  padding-top: 130px;
+  .start-item__name {
+    font-size: 24.67px;
+    font-weight: 700;
+    line-height: 30px;
+  }
+
+  .start-item__info {
+    margin-bottom: 25px;
+  }
+  .start-item__button {
+    padding: 18px 36px 18px 36px;
+
+    p {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 18.2618px;
+      line-height: 22px;
+    }
+  }
+}
+.start-item:first-child {
+  background: url("/public/media/start-item-number1.png");
+}
+
+.start-item:nth-child(2) {
+  background: url("/public/media/start-item-number2.png");
+}

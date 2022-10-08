@@ -1,0 +1,86 @@
+@import "../../style/variables.css";
+
+.download-game {
+  max-width: 1160px;
+  margin: 0 auto;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+
+    padding-top: 77px;
+    padding-bottom: 75px;
+    margin-left: 3.044%;
+    margin-right: 3.044%;
+    margin-top: -46.28px;
+
+    border-radius: 75px;
+    background: linear-gradient(
+      180deg,
+      rgba(193, 137, 8, 0) 12.38%,
+      #4a2110 49.57%
+    );
+    color: white;
+    .download-game__img {
+      width: 110%;
+    }
+    .download-game__info {
+      display: flex;
+      flex-direction: column;
+
+      margin: 0 7%;
+      .download-game__info_name {
+        font-size: 22.15px;
+        font-weight: 700;
+        line-height: 27px;
+      }
+      .download-game__info_text {
+        font-size: 21.14px;
+        font-weight: 400;
+        line-height: 33.06px;
+
+        margin-bottom: 20px;
+      }
+      .download-game__button {
+        align-self: start;
+
+        padding: 18px 38px 18px 38px;
+        color: white;
+
+        p {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 18.8553px;
+          line-height: 23px;
+
+          background: linear-gradient(180deg, #ffffff 55.73%, #aa3504 100%);
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+        }
+      }
+    }
+    .arrow-down {
+      position: absolute;
+      align-self: center;
+      bottom: -35px;
+      z-index: 3;
+    }
+  }
+}
+
+@media screen and (min-width: 1180px) {
+  .download-game {
+    .container {
+      flex-direction: row;
+      margin-left: 0;
+      margin-right: 0;
+    }
+  }
+}

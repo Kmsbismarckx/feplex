@@ -11,16 +11,54 @@ body {
 }
 
 .App {
-  padding-top: 70px;
-  background: url("/public/media/pc-sword1.png") no-repeat top 38px right 154px, url("/public/media/pc-sword2.png") no-repeat top 216px left 43px, url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px, url("/public/media/pc-background1.png") no-repeat top 328px right 41px, url("/public/media/background2.png") no-repeat top 531px left -296px;
+  margin-top: 70px;
+}
+.App .general {
+  background: url("/public/media/pc-sword1.png") no-repeat top -48px right 154px, url("/public/media/pc-sword2.png") no-repeat top 216px left 43px, url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px, url("/public/media/pc-background1.png") no-repeat top 328px right 41px, url("/public/media/background2.png") no-repeat top 531px left -296px;
   background-size: auto, auto, auto, auto, auto;
 }
+.App .start .header {
+  margin-bottom: 0;
+}
+.App .start .start-items__container {
+  margin: 0 auto;
+  display: flex;
+  width: 995px;
+}
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1024px) {
   .App {
-    padding-top: 35px;
+    margin-top: 35px;
+  }
+  .App .general {
     background: url("/public/media/sword1.png") no-repeat right top 238px, url("/public/media/sword-blur.png") no-repeat left top 500px, url("/public/media/background1.png") no-repeat center top 347px, none;
     background-size: auto, auto, 135%;
+  }
+  .App .start {
+    color: #ffffff;
+  }
+  .App .start .start-items {
+    padding-bottom: 56px;
+  }
+  .App .start .start-items .start-items__container {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    width: 83%;
+  }
+  .App .start .choose-server {
+    background: #4a2110;
+    padding-top: 32px;
+  }
+  .App .start .choose-server .container {
+    width: 83%;
+  }
+  .App .start .choose-server .container .choose-server__name {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 24px;
+    line-height: 29px;
+    margin-bottom: 35px;
   }
 }
 .blur {

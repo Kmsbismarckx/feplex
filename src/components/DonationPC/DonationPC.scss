@@ -30,6 +30,10 @@
       display: flex;
       align-items: center;
       flex-grow: 8;
+      margin-bottom: 24px;
+      img {
+        margin-right: 16.35px;
+      }
     }
 
     .donation-pc__header_goods {
@@ -40,18 +44,6 @@
       font-size: 20px;
       line-height: 24px;
       flex-grow: 4;
-
-      .donation-pc__header_goods_item {
-        border: 5px solid #572611;
-        border-radius: 36px;
-        padding: 20px 26px;
-      }
-      .active {
-        border: 5px solid transparent;
-        background: #fba454;
-        border-radius: 36px;
-        padding: 20px 26px;
-      }
     }
   }
 

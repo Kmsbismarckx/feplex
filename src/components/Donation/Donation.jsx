@@ -32,7 +32,7 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
                   localStorage.setItem("nick", value);
                 }
               }}
-              className="donation__input"
+              className="donation__input input"
               type="text"
               placeholder="Введите ваш ник-нейм"
             />

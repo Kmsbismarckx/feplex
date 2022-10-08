@@ -7,10 +7,13 @@ import OnlineInfo from "../OnlineInfo/OnlineInfo";
 import { globalContext } from "../../context";
 import DonationPC from "../DonationPC/DonationPC";
 import { useParams } from "react-router-dom";
+import PayModal from "../PayModal/PayModal";
 
 const Main = () => {
   const [value, setValue] = useState("");
-  const [nickname, setNickname] = useState(localStorage.getItem("nick") || "");
+  const [nickname, setNickname] = useState(
+    localStorage.getItem("nick") || null
+  );
   const donationItemsData = [
     [
       { imgSrc: "/media/donation-header-item1.png", value: "VIP" },
@@ -57,10 +60,10 @@ const Main = () => {
     { name: "Монеты", data: [], isSelected: false, active: "" },
   ]);
   const [donationItems, setDonationItems] = useState(categories[0].data);
+  const [modal, setModal] = useState(false);
+
   const { isMobile } = useContext(globalContext);
   const { nick } = useParams();
-
-  console.log(donationItems);
 
   if (nick) {
     return (
@@ -73,6 +76,8 @@ const Main = () => {
             setCategories={setCategories}
             donationItems={donationItems}
             setDonationItems={setDonationItems}
+            modal={modal}
+            setModal={setModal}
           />
         ) : (
           <DonationPC
@@ -80,12 +85,22 @@ const Main = () => {
             setCategories={setCategories}
             donationItems={donationItems}
             setDonationItems={setDonationItems}
+            modal={modal}
+            setModal={setModal}
           />
         )}
         {isMobile ? (
           <Subscribe />
         ) : (
           <Subscribe chestWidth={440} chestHeight={491} />
+        )}
+
+        {modal && (
+          <PayModal
+            setModal={setModal}
+            isMobile={isMobile}
+            nickname={nickname}
+          ></PayModal>
         )}
         <OnlineInfo />
       </div>

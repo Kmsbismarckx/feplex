@@ -1,0 +1,16 @@
+@import "../../../style/variables.css";
+.category {
+  border: 5px solid #572611;
+  border-radius: 36px;
+  padding: 20px 26px;
+  font-weight: 700;
+}
+
+.active {
+  border: 5px solid transparent !important;
+  background: #fba454;
+  border-radius: 36px;
+  padding: 20px 26px;
+}
+
+/*# sourceMappingURL=Category.css.map */
