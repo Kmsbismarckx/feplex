@@ -10,7 +10,6 @@ const DonationItem = ({
   dataText,
 }) => {
   let special = specialClass || "";
-
   return (
     <div className={className + " " + special}>
       <div className={`${className}_header`}>

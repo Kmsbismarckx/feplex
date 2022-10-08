@@ -64,4 +64,43 @@
   margin-top: 65px;
 }
 
+@media screen and (max-width: 1024px) {
+  .donation-pc .donation-pc__header {
+    display: flex;
+    flex-direction: column;
+  }
+  .donation-pc .donation-pc__header .donation-pc__header_goods {
+    overflow: scroll;
+  }
+  .donation-pc .donation-pc__header .donation-pc__header_goods .donation-pc__header_goods_item:not(:last-child) {
+    margin-right: 10px;
+  }
+  .donation-pc .donation-pc__header .donation-pc__header_goods::-webkit-scrollbar {
+    display: none;
+  }
+  .donation-pc .donation-pc__footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 0;
+  }
+  .donation-pc .donation-pc__footer .donation-pc__footer_item_indicators {
+    display: flex;
+  }
+  .donation-pc .donation-pc__footer .donation-pc__footer_item_indicators .donation-pc__footer_indicator {
+    width: 58px;
+    height: 8.26px;
+    background: #37180a;
+    border-radius: 18px;
+  }
+  .donation-pc .donation-pc__footer .donation-pc__footer_item_indicators .donation-pc__footer_indicator:not(:last-child) {
+    margin-right: 5px;
+  }
+  .donation-pc .donation-pc__footer .all__pages_container .donation-pc__footer_item {
+    min-width: 328px;
+    margin-top: 33.9px;
+  }
+}
+
 /*# sourceMappingURL=DonationPC.css.map */

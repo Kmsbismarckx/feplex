@@ -5,7 +5,6 @@ const DonationHeader = ({
   nick,
   categories,
   setCategories,
-  donationItems,
   setDonationItems,
 }) => {
   return (
