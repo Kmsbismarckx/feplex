@@ -1,0 +1,35 @@
+{
+  "files": {
+    "main.css": "/feplex/static/css/main.4fc48017.css",
+    "main.js": "/feplex/static/js/main.68cfbddd.js",
+    "static/media/ban-page-background-large.png": "/feplex/static/media/ban-page-background-large.c0f54858c93b7d0d373f.png",
+    "static/media/pc-background1.png": "/feplex/static/media/pc-background1.6ff3cc38343f894e6f2e.png",
+    "static/media/background2.png": "/feplex/static/media/background2.d44ff29c4f5445a8643a.png",
+    "static/media/background1.png": "/feplex/static/media/background1.789dabd3a7cd9fb6a57c.png",
+    "static/media/pc-subscribe-background-blur.png": "/feplex/static/media/pc-subscribe-background-blur.ee2bfe7c6df2964dd8a0.png",
+    "static/media/ban-page-background-bricks.png": "/feplex/static/media/ban-page-background-bricks.d4cb9d2a3ed24fc38aeb.png",
+    "static/media/ban-page-background-small.png": "/feplex/static/media/ban-page-background-small.5f778073081e68522588.png",
+    "static/media/pc-subscribe-background.png": "/feplex/static/media/pc-subscribe-background.da96ca3b4e6e7135ade6.png",
+    "static/media/pc-sword-blur.png": "/feplex/static/media/pc-sword-blur.9d757a92e6347d0276b2.png",
+    "static/media/online-info-background.png": "/feplex/static/media/online-info-background.62c87e6b977a226c2b8a.png",
+    "static/media/sword-blur.png": "/feplex/static/media/sword-blur.8c868043f413f303472e.png",
+    "static/media/pc-sword1.png": "/feplex/static/media/pc-sword1.1d55adcbd60a803a94ad.png",
+    "static/media/subscribe-item6.png": "/feplex/static/media/subscribe-item6.e88d4f399d37edf9d34e.png",
+    "static/media/pc-sword2.png": "/feplex/static/media/pc-sword2.8cab927e944157a624f8.png",
+    "static/media/subscribe-item5.png": "/feplex/static/media/subscribe-item5.9428d4d40f774889eb4a.png",
+    "static/media/subscribe-item4.png": "/feplex/static/media/subscribe-item4.d9cc60ba00ef0709b3a3.png",
+    "static/media/sword1.png": "/feplex/static/media/sword1.a3a0586d1812f5b20871.png",
+    "static/media/start-item-number2.png": "/feplex/static/media/start-item-number2.52a1a41f657767cbe2fe.png",
+    "static/media/input-promo.svg": "/feplex/static/media/input-promo.1f69d931c825ccb62a73.svg",
+    "static/media/input-arrow.svg": "/feplex/static/media/input-arrow.72ce535f9667649485ad.svg",
+    "static/media/man-icon.svg": "/feplex/static/media/man-icon.8b86167db55f947c0f82.svg",
+    "index.html": "/feplex/index.html",
+    "static/media/green-dot.svg": "/feplex/static/media/green-dot.ad7a16c06092ed1af5a5.svg",
+    "main.4fc48017.css.map": "/feplex/static/css/main.4fc48017.css.map",
+    "main.68cfbddd.js.map": "/feplex/static/js/main.68cfbddd.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.4fc48017.css",
+    "static/js/main.68cfbddd.js"
+  ]
+}
