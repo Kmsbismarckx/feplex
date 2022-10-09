@@ -14,6 +14,9 @@
   }
 
   .start-item__info {
+    font-size: 23.55px;
+    font-weight: 400;
+    line-height: 36.83px;
     margin-bottom: 25px;
   }
   .start-item__button {
@@ -31,6 +34,15 @@
   background: url("/public/media/start-item-number1.png");
 }
 
-.start-item:nth-child(2) {
+.start-item:last-child {
   background: url("/public/media/start-item-number2.png");
 }
+
+@media screen and (min-width: 1024px) {
+  .start-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+  }
+} ;

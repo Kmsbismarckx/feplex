@@ -6,7 +6,8 @@ import { Link, useParams } from "react-router-dom";
 
 const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
   const { nick } = useParams();
-  console.log(nick);
+
+  console.log(nickname);
   return (
     <div className="donation-container">
       <div className="donation">
@@ -20,17 +21,12 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
             <h2>Покупка доната</h2>
           </div>
 
-          <div className="donation__input_wrapper">
+          <div className="donation__input_wrapper input__wrapper">
             <Input
               pattern={"[A-Za-zА-Яа-яЁё]{6,}"}
               onChange={(e) => {
                 setValue(e.target.value);
-              }}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  setNickname(value);
-                  localStorage.setItem("nick", value);
-                }
+                console.log(e.target.value);
               }}
               className="donation__input input"
               type="text"
@@ -41,12 +37,12 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
               src="/media/donation-item5.png"
               alt=""
             />
-            <Link to={`/general/${nickname}`}>
-              <Button className="donation__input_button">
+            <Link to={`/general/${value}`}>
+              <Button className="donation__input_button input__button">
                 <img
                   onClick={() => {
-                    setNickname(value);
                     localStorage.setItem("nick", value);
+                    setNickname(value);
                   }}
                   src="/media/arrow-icon.svg"
                   alt=""

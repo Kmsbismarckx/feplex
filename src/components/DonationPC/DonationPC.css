@@ -87,6 +87,9 @@
     background: #37180a;
     border-radius: 18px;
   }
+  .donation-pc .donation-pc__footer .donation-pc__footer_item_indicators .donation-pc__selected {
+    background: #fba454;
+  }
   .donation-pc .donation-pc__footer .donation-pc__footer_item_indicators .donation-pc__footer_indicator:not(:last-child) {
     margin-right: 5px;
   }

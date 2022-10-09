@@ -1,14 +1,13 @@
 import React, { useState } from "react";
-import "./PayModal.css";
+import "../PayModal/PayModal.css";
 import Button from "../UI/Button/Button";
+import "../../style/variables.css";
+import "./BanModal.css";
 import Input from "../UI/Input/Input";
-import Category from "../UI/Category/Category";
-import Checkbox from "../UI/Checkbox/Checkbox";
-import { categoryActive } from "../../functions/categoryActive";
 import ModalPayment from "../ModalPayment/ModalPayment";
 import ModalFooter from "../ModalFooter/ModalFooter";
 
-const PayModal = ({ setModal, isMobile, nickname }) => {
+const BanModal = ({ setModal, isMobile, nickname }) => {
   const rootClasses = ["pay-modal"];
   const [modalData, modalImg] = JSON.parse(localStorage.getItem("modal-data"));
   const [categories, setCategories] = useState([
@@ -53,21 +52,22 @@ const PayModal = ({ setModal, isMobile, nickname }) => {
                 </Button>
               </div>
               <div className="pay-modal__info">
-                <img src={modalImg} alt="" />
+                <img src="/media/ban-modal-img.png" alt="" />
                 <p>
-                  <span>{modalData}</span> на аккаунт <span>{nickname}</span>
+                  <span>Разблокировка</span> на аккаунт <span>{nickname}</span>
                 </p>
               </div>
             </div>
           ) : (
             <div className="pay-modal__content_header">
               <div className="pay-modal__content_header_info">
-                <img src={modalImg} alt="" />
+                <img src="/media/ban-modal-img.png" alt="" />
                 <div className="pay-modal__info">
                   <h1>Подтверждение покупки</h1>
                   <hr />
                   <p>
-                    <span>{modalData}</span> на аккаунт <span>{nickname}</span>
+                    <span>Разблокировка</span> на аккаунт{" "}
+                    <span>{nickname}</span>
                   </p>
                 </div>
                 <Button
@@ -83,36 +83,15 @@ const PayModal = ({ setModal, isMobile, nickname }) => {
           )}
           <div className="pay-modal__content_footer">
             <div className="pay-modal__confirmation">
-              <div className="pay-modal__input_wrapper pay-modal__input_wrapper1">
+              <div className="pay-modal__input_wrapper ban-modal__input_wrapper1">
+                <p>Блокировка выдана 21.07.22 по причине: Gay</p>
+              </div>
+              <div className="pay-modal__input_wrapper ban-modal__input_wrapper2">
                 <Input
                   placeholder={"Введите Ваш почтовый адрес"}
-                  type={"email"}
                   className={"pay-modal__input"}
                 />
               </div>
-              <div className="pay-modal__input_wrapper pay-modal__input_wrapper2">
-                <Input
-                  placeholder={"Введите промокод, если есть"}
-                  className={"pay-modal__input"}
-                />
-              </div>
-            </div>
-            <div className={"pay-modal__categories"}>
-              {categories.map((category, index) => {
-                return (
-                  <Category
-                    key={category.name}
-                    className={`pay-modal__category ${
-                      category.isSelected && "active"
-                    }`}
-                    onClick={() => {
-                      setCategories(categoryActive(index, categories));
-                    }}
-                  >
-                    <p>{category.name}</p>
-                  </Category>
-                );
-              })}
             </div>
             <h1 className={"pay-variant__name"}>Выберите способ оплаты</h1>
             <ModalPayment
@@ -128,4 +107,4 @@ const PayModal = ({ setModal, isMobile, nickname }) => {
   );
 };
 
-export default PayModal;
+export default BanModal;

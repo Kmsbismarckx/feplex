@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "./DonationPC.css";
 import DonationItem from "../DonationItem/DonationItem";
 import { useParams } from "react-router-dom";
@@ -15,6 +15,8 @@ const DonationPc = ({
   setModal,
 }) => {
   const { nick } = useParams();
+  const [currentPage, setCurrentPage] = useState(1);
+
   return (
     <div className="donation-pc__container">
       <div className="donation-pc">
@@ -30,7 +32,7 @@ const DonationPc = ({
         {!isMobile && <hr />}
         {isMobile ? (
           <div className="donation-pc__footer">
-            <Slider>
+            <Slider currentPage={currentPage} setCurrentPage={setCurrentPage}>
               {donationItems.map((item) => {
                 return (
                   <DonationItem
@@ -46,10 +48,23 @@ const DonationPc = ({
               })}
             </Slider>
             <div className={`donation-pc__footer_item_indicators`}>
-              <div className={`donation-pc__footer_indicator`}></div>
-              <div className={`donation-pc__footer_indicator`}></div>
-              <div className={`donation-pc__footer_indicator`}></div>
-              <div className={`donation-pc__footer_indicator`}></div>
+              {donationItems.map((item, index) => {
+                if (index + 1 === currentPage) {
+                  return (
+                    <div
+                      key={item.value}
+                      className={`donation-pc__footer_indicator donation-pc__selected`}
+                    ></div>
+                  );
+                } else {
+                  return (
+                    <div
+                      key={item.value}
+                      className={`donation-pc__footer_indicator`}
+                    ></div>
+                  );
+                }
+              })}
             </div>
           </div>
         ) : (

@@ -11,41 +11,185 @@ body {
   font-family: "Montserrat", sans-serif;
 }
 
-.App {
-  margin-top: 70px;
-  .general {
+a {
+  text-decoration: none;
+  color: white;
+}
+
+@keyframes floating {
+  0% {
     background: url("/public/media/pc-sword1.png") no-repeat top -48px right 154px,
       url("/public/media/pc-sword2.png") no-repeat top 216px left 43px,
       url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px,
       url("/public/media/pc-background1.png") no-repeat top 328px right 41px,
       url("/public/media/background2.png") no-repeat top 531px left -296px;
+  }
+  50% {
+    background: url("/public/media/pc-sword1.png") no-repeat top -48px right 154px,
+      url("/public/media/pc-sword2.png") no-repeat top 216px left 43px,
+      url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px,
+      url("/public/media/pc-background1.png") no-repeat top 348px right 41px,
+      url("/public/media/background2.png") no-repeat top 551px left -296px;
+  }
+  100% {
+    background: url("/public/media/pc-sword1.png") no-repeat top -48px right 154px,
+      url("/public/media/pc-sword2.png") no-repeat top 216px left 43px,
+      url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px,
+      url("/public/media/pc-background1.png") no-repeat top 328px right 41px,
+      url("/public/media/background2.png") no-repeat top 531px left -296px;
+  }
+}
 
+.App {
+  .general {
+    margin-top: 70px;
     background-size: auto, auto, auto, auto, auto;
+    animation: floating ease-in-out 5s infinite;
   }
   .start {
+    margin-top: 70px;
+    color: #ffffff;
     .header {
       margin-bottom: 0;
     }
-    .start-items__container {
-      margin: 0 auto;
+    .start-items {
+      .start-items__container {
+        margin: 0 auto 84px;
+        display: flex;
+        width: 995px;
+        height: 415px;
+        hr {
+          border: none;
+          width: 0.51px;
+          height: 90%;
+          margin-right: 50px;
+          margin-left: 50px;
+          background: #532410;
+          align-self: end;
+        }
+      }
+    }
+    .choose-server {
+      background: #4a2110;
+
+      padding-top: 70.45px;
+      padding-bottom: 68px;
+      .container {
+        width: 83%;
+        .choose-server__name {
+          font-style: normal;
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 29px;
+
+          margin-bottom: 35px;
+        }
+      }
+    }
+  }
+  .ban-page {
+    color: white;
+    .ban-page__wrapper {
+      padding-bottom: 210px;
+      padding-top: 35px;
+      background: url("/public/media/ban-page-background-bricks.png") no-repeat
+          bottom center,
+        url("/public/media/ban-page-background-large.png") no-repeat center;
+
+      background-size: contain, cover;
+    }
+    .header {
+      margin-top: 0;
+      margin-bottom: 59px;
+    }
+    .ban-page__main {
       display: flex;
-      width: 995px;
+      justify-content: center;
+      max-width: 1160px;
+      margin: 0 auto;
+
+      flex-direction: column;
+      padding-bottom: 135px;
+      .ban-page__main_container {
+        display: flex;
+        justify-content: center;
+        align-items: start;
+        align-self: end;
+        flex-direction: column;
+        width: 575px;
+        .ban-page__main_name {
+          font-size: 32px;
+          font-weight: 700;
+          line-height: 39px;
+          margin-bottom: 10px;
+        }
+        .ban-page__main_info {
+          font-size: 23px;
+          font-weight: 400;
+          line-height: 37px;
+          margin-bottom: 41px;
+        }
+        .ban-page__input_wrapper {
+          max-width: 433px;
+          box-shadow: none;
+        }
+        .ban-page__input_wrapper::before {
+          content: url("/public/media/man-icon.svg");
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: absolute;
+          width: 60.71px;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background: #532410;
+          border-bottom-left-radius: 34.9334px;
+          border-top-left-radius: 34.9334px;
+        }
+      }
+    }
+    .ban-page__art-area {
+      padding-top: 162px;
+      display: flex;
+      justify-content: center;
+      position: relative;
+      .ban-page__art-area_container {
+        position: relative;
+        max-width: 1160px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        text-align: center;
+        width: 91%;
+
+        img {
+          position: absolute;
+          bottom: 74px;
+          left: 76px;
+        }
+      }
+      .ban-page__background-bricks {
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
     }
   }
 }
 
 @media screen and (max-width: 1024px) {
   .App {
-    margin-top: 35px;
     .general {
       background: url("/public/media/sword1.png") no-repeat right top 238px,
         url("/public/media/sword-blur.png") no-repeat left top 500px,
         url("/public/media/background1.png") no-repeat center top 347px, none;
       background-size: auto, auto, 135%;
+      animation: none;
     }
     .start {
-      color: #ffffff;
-
       .start-items {
         padding-bottom: 56px;
         .start-items__container {
@@ -53,6 +197,7 @@ body {
           display: flex;
           flex-direction: column;
           width: 83%;
+          height: auto;
         }
       }
       .choose-server {
@@ -67,6 +212,75 @@ body {
             line-height: 29px;
 
             margin-bottom: 35px;
+          }
+        }
+      }
+    }
+
+    .ban-page {
+      color: white;
+      overflow: hidden;
+      .ban-page__wrapper {
+        padding-top: 35px;
+        padding-bottom: 134px;
+        max-height: 508px;
+        background: url("/public/media/ban-page-background-small.png") no-repeat
+          center;
+        background-size: cover;
+      }
+      .header {
+        margin-top: 0;
+        margin-bottom: 59px;
+      }
+      .ban-page__main {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        flex-direction: column;
+        padding-bottom: 135px;
+        .ban-page__main_container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          align-self: center;
+          flex-direction: column;
+          text-align: center;
+          width: 91%;
+          max-width: 605px;
+          .ban-page__main_name {
+            font-size: 19.68px;
+            font-weight: 700;
+            line-height: 24px;
+            margin-bottom: 10px;
+          }
+          .ban-page__main_info {
+            font-size: 16.67px;
+            font-weight: 400;
+            line-height: 22.95px;
+            margin-bottom: 41px;
+          }
+          .ban-page__input_wrapper {
+            max-width: 433px;
+            box-shadow: none;
+          }
+        }
+      }
+      .ban-page__art-area {
+        padding-top: 346px;
+        .ban-page__art-area_container {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          text-align: center;
+          width: 91%;
+          max-width: 605px;
+          img {
+            position: absolute;
+            bottom: 17px;
+            left: 76px;
           }
         }
       }

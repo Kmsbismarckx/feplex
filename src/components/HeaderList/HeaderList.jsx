@@ -1,13 +1,20 @@
 import React from "react";
 import "./HeaderList.css";
+import { Link } from "react-router-dom";
 
-const HeaderList = ({ className, isVisible }) => {
+const HeaderList = ({ className, isVisible, setIsVisible }) => {
   return (
     <div className={`header__list ${className}`}>
-      <a className="header__list_item">
+      <Link
+        to={"/start"}
+        className="header__list_item"
+        onClick={() => {
+          setIsVisible(false);
+        }}
+      >
         <img src="/media/header-list-item1.svg" alt="" />
         <p>Как начать игру</p>
-      </a>
+      </Link>
       <a className="header__list_item">
         <img src="/media/header-list-item2.svg" alt="" />
         <p>Магазин</p>

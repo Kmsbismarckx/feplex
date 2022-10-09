@@ -13,7 +13,7 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(12.5px);
   z-index: 10;
-  overflow: scroll;
+
   .pay-modal__content {
     display: flex;
     flex-direction: column;
@@ -225,23 +225,16 @@
       }
     }
   }
+  .pay-modal__content::-webkit-scrollbar {
+    display: none;
+  }
 }
-
+.pay-modal::-webkit-scrollbar {
+  display: none;
+}
 @media screen and (max-width: 1024px) {
   .pay-modal {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    background: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(12.5px);
-    z-index: 10;
+    overflow: scroll;
     .pay-modal__content {
       display: flex;
       flex-direction: column;

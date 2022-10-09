@@ -3,6 +3,7 @@ import HeaderList from "../HeaderList/HeaderList";
 import "./Header.css";
 import Burger from "../UI/Burger/Burger";
 import { globalContext } from "../../context";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const { isVisible, setIsVisible, isMobile } = useContext(globalContext);
@@ -12,12 +13,11 @@ const Header = () => {
       setIsVisible(false);
     }
   }, [isMobile]);
-  console.log(isMobile);
 
   return (
     <div className="container">
       <div className="header">
-        <div className="header__logo">
+        <Link to={"/"} style={{ zIndex: 6 }} className="header__logo">
           <img
             className="header__logo_img"
             src="/media/header-logo.svg"
@@ -31,14 +31,19 @@ const Header = () => {
             src="/media/header-stroke.svg"
             alt=""
           />
-        </div>
+        </Link>
+
         {isMobile ? (
           <Burger isVisible={isVisible} setIsVisible={setIsVisible} />
         ) : (
-          <HeaderList />
+          <HeaderList setIsVisible={setIsVisible} isVisible={isVisible} />
         )}
         {isVisible && (
-          <HeaderList className="active-list" isVisible={isVisible} />
+          <HeaderList
+            className="active-list"
+            setIsVisible={setIsVisible}
+            isVisible={isVisible}
+          />
         )}
       </div>
     </div>

@@ -1,0 +1,15 @@
+@import "../../style/variables.css";
+
+.ban-modal__input_wrapper1 {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10.2153px;
+  line-height: 12px;
+  background: #532410 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ban-modal__input_wrapper2::before {
+  content: url("/public/media/input-arrow.svg");
+}

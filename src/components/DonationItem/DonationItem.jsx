@@ -4,7 +4,7 @@ import "./DonationItem.css";
 
 const DonationItem = ({ className, item, children, setModal }) => {
   let special = item.specialClass || "";
-  console.log(special);
+
   return (
     <div className={className + " " + special}>
       <div className={`${className}_header`}>
