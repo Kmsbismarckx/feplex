@@ -1,10 +1,10 @@
 import React, { useContext } from "react";
 import "./Footer.css";
-import { useMatchMedia } from "../../hooks/useMatchMedia";
 import { globalContext } from "../../context";
+import { useMatchMedia } from "../../hooks/useMatchMedia";
 
 const Footer = () => {
-  const { isMobile } = useContext(globalContext);
+  const { isMobile, isFooter } = useContext(globalContext);
   return (
     <div className="footer">
       <div className="container">
@@ -16,7 +16,7 @@ const Footer = () => {
           <p className="contact-info__item">ОГРН 299190137</p>
         </div>
         <div className="footer__down">
-          {isMobile ? (
+          {isFooter ? (
             <div className="payment">
               <img
                 src="/media/payment/applePay.png"
@@ -45,6 +45,11 @@ const Footer = () => {
               />
               <img
                 src="/media/payment/gpay.png"
+                alt=""
+                className="payment__logo"
+              />
+              <img
+                src="/media/payment/megafon.png"
                 alt=""
                 className="payment__logo"
               />

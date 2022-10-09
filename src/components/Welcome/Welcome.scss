@@ -11,8 +11,8 @@
     max-width: 1160px;
   }
   .welcome__button {
-    width: 207.84px;
-    height: 47.45px;
+    width: 400.84px;
+    height: 91.45px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -20,8 +20,12 @@
       margin-right: 7.59px;
       font-style: normal;
       font-weight: 600;
-      font-size: 12.9899px;
-      line-height: 16px;
+      font-size: 25px;
+      line-height: 30px;
+    }
+    .button__img {
+      width: 22px;
+      height: 26px;
     }
   }
   .welcome__name {
@@ -41,7 +45,7 @@
   }
 }
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1024px) {
   .welcome {
     display: flex;
     flex-direction: column;

@@ -12,4 +12,13 @@
 }
 .ban-modal__input_wrapper2::before {
   content: url("/public/media/input-arrow.svg");
+  background: none;
+}
+
+@media screen and (min-width: 1024px) {
+  .ban-modal__input_wrapper1 {
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 20px;
+  }
 }

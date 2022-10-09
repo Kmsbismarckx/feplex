@@ -56,13 +56,17 @@
   order: -1;
 }
 
-@media screen and (max-width: 766px) {
+@media screen and (max-width: 1024px) {
   .footer .container {
-    width: 100%;
+    width: 90%;
     flex-direction: column;
   }
+  .footer .container .contact-info {
+    margin-left: 0;
+    align-self: start;
+  }
   .footer .footer__down {
-    width: 90%;
+    width: 100%;
     align-items: center;
   }
   .footer .footer__down .payment {
@@ -77,11 +81,15 @@
     margin: 0 9px;
   }
   .footer .footer__down .copyright {
+    align-self: center;
+    width: 100%;
     font-style: normal;
     font-weight: 400;
     font-size: 13.5335px;
     line-height: 150.84%;
-    margin: 30.81px;
+    margin-bottom: 30.81px;
+    margin-left: 0;
+    margin-right: 0;
     color: #9a9a9a;
     order: 1;
   }
