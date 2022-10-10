@@ -160,6 +160,10 @@ a {
     background: url("/public/media/sword1.png") no-repeat right top 238px, url("/public/media/sword-blur.png") no-repeat left top 500px, url("/public/media/background1.png") no-repeat center top 347px, none;
     background-size: auto, auto, 135%;
     animation: none;
+    margin-top: 35px;
+  }
+  .App .start {
+    margin-top: 35px;
   }
   .App .start .start-items {
     padding-bottom: 56px;

@@ -3,7 +3,6 @@ import "./PayModal.css";
 import Button from "../UI/Button/Button";
 import Input from "../UI/Input/Input";
 import Category from "../UI/Category/Category";
-import Checkbox from "../UI/Checkbox/Checkbox";
 import { categoryActive } from "../../functions/categoryActive";
 import ModalPayment from "../ModalPayment/ModalPayment";
 import ModalFooter from "../ModalFooter/ModalFooter";
@@ -55,9 +54,16 @@ const PayModal = ({ setModal, isMobile, nickname }) => {
               <div className="pay-modal__info">
                 <img src={modalImg} alt="" />
                 <p>
-                  <span>{modalData}</span> на аккаунт <span>{nickname}</span>
+                  <span>{modalData}</span> на аккаунт{" "}
+                  <span>{nickname || localStorage.getItem("nick")}</span>
                 </p>
               </div>
+              <hr
+                style={{
+                  alignSelf: "center",
+                  width: "314px",
+                }}
+              />
             </div>
           ) : (
             <div className="pay-modal__content_header">

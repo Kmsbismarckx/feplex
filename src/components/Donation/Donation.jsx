@@ -40,11 +40,12 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
             <Link to={`/general/${value}`}>
               <Button className="donation__input_button input__button">
                 <img
+                  className="input__button_img"
                   onClick={() => {
                     localStorage.setItem("nick", value);
                     setNickname(value);
                   }}
-                  src="/media/arrow-icon.svg"
+                  src="/media/input-button-circle.svg"
                   alt=""
                 />
               </Button>

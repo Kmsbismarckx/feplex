@@ -9,12 +9,6 @@ import ModalFooter from "../ModalFooter/ModalFooter";
 
 const BanModal = ({ setModal, isMobile, nickname }) => {
   const rootClasses = ["pay-modal"];
-  const [modalData, modalImg] = JSON.parse(localStorage.getItem("modal-data"));
-  const [categories, setCategories] = useState([
-    { name: "На месяц", isSelected: true },
-    { name: "На 3 месяца" },
-    { name: "На год" },
-  ]);
   const [payments, setPayments] = useState([
     { src: "/media/pay-variant.png", isSelected: true },
     { src: "/media/pay-variant.png", isSelected: false },

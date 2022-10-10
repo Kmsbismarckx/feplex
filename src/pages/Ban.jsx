@@ -6,6 +6,7 @@ import { Link } from "react-router-dom";
 import Button from "../components/UI/Button/Button";
 import BanModal from "../components/BanModal/BanModal";
 import { globalContext } from "../context";
+import { useModalScroll } from "../hooks/useModalScroll";
 
 const Ban = () => {
   const [value, setValue] = useState("");
@@ -14,6 +15,8 @@ const Ban = () => {
   );
   const [modal, setModal] = useState(false);
   const { isMobile } = useContext(globalContext);
+
+  useModalScroll(modal);
   return (
     <div className={"ban-page"}>
       <div className="ban-page__wrapper">

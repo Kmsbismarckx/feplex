@@ -11,7 +11,7 @@ const Welcome = () => {
         </h1>
         <p className="welcome__description">Присоединяйся к игре</p>
         <Button className={"welcome__button"}>
-          <p className="button__text">Feplex.com, 19132</p>
+          <p className="button__text">FEPLEX.COM 19132</p>
           <img
             className="button__img"
             src="/media/button-attribute.svg"

@@ -1,11 +1,15 @@
 @import "../../../style/variables.css";
 
 .button {
+  position: relative;
+
   background: linear-gradient(180deg, #9c4b28 0%, #4a200e 100%);
   box-shadow: 0 5.19595px 4.15676px rgba(241, 177, 11, 0.26),
     inset 0px -5.19595px 0px rgba(0, 0, 0, 0.25);
   border-radius: 51.9595px;
   border: none;
+
+  cursor: pointer;
   p {
     background: linear-gradient(
       180deg,

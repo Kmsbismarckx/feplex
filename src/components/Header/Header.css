@@ -11,7 +11,7 @@
   position: relative;
   height: 92.57px;
   max-width: 1160px;
-  margin: 35.01px 3.044% 65.42px;
+  margin: 0 3.044% 65.42px;
   background: rgba(105, 53, 30, 0.6);
   box-shadow: inset 0px -7px 0px rgba(0, 0, 0, 0.25);
   backdrop-filter: blur(7.5px);
@@ -91,6 +91,7 @@
     margin-right: 0;
     margin-left: 0;
     margin-bottom: 0;
+    margin: 35.01px 3.044% 65.42px;
   }
 }
 

@@ -4,7 +4,7 @@ import { globalContext } from "../../context";
 import { useMatchMedia } from "../../hooks/useMatchMedia";
 
 const Footer = () => {
-  const { isMobile, isFooter } = useContext(globalContext);
+  const { isMobile, isFooter, isIphoneSE } = useContext(globalContext);
   return (
     <div className="footer">
       <div className="container">
@@ -16,10 +16,10 @@ const Footer = () => {
           <p className="contact-info__item">ОГРН 299190137</p>
         </div>
         <div className="footer__down">
-          {isFooter ? (
+          {isIphoneSE ? (
             <div className="payment">
               <img
-                src="/media/payment/applePay.png"
+                src="/media/payment/visa.png"
                 alt=""
                 className="payment__logo"
               />
@@ -29,22 +29,23 @@ const Footer = () => {
                 className="payment__logo"
               />
               <img
-                src="/media/payment/mir.png"
-                alt=""
-                className="payment__logo"
-              />{" "}
-              <img
                 src="/media/payment/qiwi.png"
                 alt=""
                 className="payment__logo"
               />
               <img
-                src="/media/payment/spay.png"
+                src="/media/payment/applePay.png"
                 alt=""
                 className="payment__logo"
               />
               <img
                 src="/media/payment/gpay.png"
+                alt=""
+                className="payment__logo"
+              />
+
+              <img
+                src="/media/payment/spay.png"
                 alt=""
                 className="payment__logo"
               />
@@ -57,7 +58,12 @@ const Footer = () => {
           ) : (
             <div className="payment">
               <img
-                src="/media/payment/applePay.png"
+                src="/media/payment/mir.png"
+                alt=""
+                className="payment__logo"
+              />
+              <img
+                src="/media/payment/visa.png"
                 alt=""
                 className="payment__logo"
               />
@@ -67,22 +73,23 @@ const Footer = () => {
                 className="payment__logo"
               />
               <img
-                src="/media/payment/mir.png"
-                alt=""
-                className="payment__logo"
-              />{" "}
-              <img
                 src="/media/payment/qiwi.png"
                 alt=""
                 className="payment__logo"
               />
               <img
-                src="/media/payment/spay.png"
+                src="/media/payment/applePay.png"
                 alt=""
                 className="payment__logo"
               />
               <img
                 src="/media/payment/gpay.png"
+                alt=""
+                className="payment__logo"
+              />
+
+              <img
+                src="/media/payment/spay.png"
                 alt=""
                 className="payment__logo"
               />
@@ -98,11 +105,6 @@ const Footer = () => {
               />
               <img
                 src="/media/payment/tele2.png"
-                alt=""
-                className="payment__logo"
-              />
-              <img
-                src="/media/payment/visa.png"
                 alt=""
                 className="payment__logo"
               />

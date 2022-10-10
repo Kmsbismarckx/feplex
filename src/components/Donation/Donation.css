@@ -43,6 +43,14 @@
   border-bottom-left-radius: inherit;
   border-top-left-radius: inherit;
 }
+.donation .donation__header .donation__input_button::after {
+  content: url("/public/media/input-button-arrow.svg");
+  position: absolute;
+  top: 17.96px;
+  left: 14.26px;
+  width: 25.15px;
+  height: 16.77px;
+}
 .donation .donation__footer {
   width: 318px;
   height: 318px;
@@ -93,6 +101,7 @@
     border-radius: 49.7748px;
     min-width: 350px;
     max-width: 407.5px;
+    width: 90%;
     height: auto;
     margin: 0 auto;
     padding: 36px;
@@ -155,10 +164,14 @@
     align-items: center;
     justify-content: center;
     position: absolute;
-    width: 55.48px;
-    height: 55.48px;
     top: 0;
     right: 0;
+    box-shadow: none;
+  }
+  .donation .donation__header .input__button_img {
+    width: 100%;
+    height: 100%;
+    position: relative;
   }
   .donation .donation__footer {
     flex-grow: 1;

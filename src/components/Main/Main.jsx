@@ -1,4 +1,4 @@
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import Welcome from "../Welcome/Welcome";
 import Donation from "../Donation/Donation";
 import "./Main.css";
@@ -8,6 +8,7 @@ import { globalContext } from "../../context";
 import DonationPC from "../DonationPC/DonationPC";
 import { useParams } from "react-router-dom";
 import PayModal from "../PayModal/PayModal";
+import { useModalScroll } from "../../hooks/useModalScroll";
 
 const Main = () => {
   const [value, setValue] = useState("");
@@ -65,6 +66,8 @@ const Main = () => {
   const { isMobile } = useContext(globalContext);
   const { nick } = useParams();
 
+  useModalScroll(modal);
+
   if (nick) {
     return (
       <div className="main">
@@ -99,7 +102,7 @@ const Main = () => {
           <PayModal
             setModal={setModal}
             isMobile={isMobile}
-            nickname={nickname}
+            nickname={nick}
           ></PayModal>
         )}
         <OnlineInfo />

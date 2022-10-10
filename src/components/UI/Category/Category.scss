@@ -1,15 +1,30 @@
 @import "../../../style/variables.css";
 
 .category {
-  border: 5px solid #572611;
+  border: 3px solid #572611;
   border-radius: 36px;
-  padding: 20px 26px;
+  padding: 12px 16px;
+
   font-weight: 700;
+  font-size: 12.0206px;
+  line-height: 15px;
 }
 
 .active {
-  border: 5px solid transparent !important;
+  border-color: transparent !important;
   background: #fba454;
-  border-radius: 36px;
-  padding: 20px 26px;
 }
+
+@media screen and (min-width: 1024px) {
+  .category {
+    border: 5px solid #572611;
+    border-radius: 36px;
+    padding: 20px 26px;
+    font-weight: 700;
+  }
+
+  .active {
+    border-color: transparent !important;
+    background: #fba454;
+  }
+} ;

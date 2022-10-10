@@ -11,13 +11,11 @@
   width: 90%;
   margin: 0 auto;
   display: flex;
-  align-items: center;
   justify-content: space-between;
 }
 .footer .contact-info {
   display: flex;
   flex-direction: column;
-  margin: 17.37px;
 }
 .footer .contact-info .contact-info__item {
   font-style: normal;
@@ -33,36 +31,40 @@
 .footer .footer__down {
   display: flex;
   flex-direction: column;
-  align-items: end;
+  justify-content: space-between;
+  align-items: center;
+  width: 380px;
 }
 .footer .footer__down .payment {
-  width: fit-content;
+  width: 100%;
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   background: #572611;
   border-radius: 16px;
   padding: 25px 9px;
-}
-.footer .footer__down .payment .payment__logo:not(.payment__logo:first-child, .payment__logo:last-child) {
-  margin: 0 9px;
 }
 .footer .footer__down .copyright {
   font-style: normal;
   font-weight: 400;
   font-size: 13.5335px;
   line-height: 150.84%;
-  margin: 30.81px;
   color: #9a9a9a;
   order: -1;
+  align-self: end;
+  text-align: end;
 }
 
 @media screen and (max-width: 1024px) {
+  .footer {
+    padding-top: 17px;
+    padding-bottom: 30.8px;
+  }
   .footer .container {
-    width: 90%;
     flex-direction: column;
   }
   .footer .container .contact-info {
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
     align-self: start;
   }
   .footer .footer__down {
@@ -72,24 +74,23 @@
   .footer .footer__down .payment {
     width: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     background: #572611;
     border-radius: 16px;
     padding: 25px 0;
-  }
-  .footer .footer__down .payment .payment__logo:not(.payment__logo:first-child, .payment__logo:last-child) {
-    margin: 0 9px;
+    margin-bottom: 17.37px;
+    margin-top: 17.37px;
   }
   .footer .footer__down .copyright {
-    align-self: center;
-    width: 100%;
+    align-self: start;
+    text-align: start;
+    width: 284.34px;
     font-style: normal;
     font-weight: 400;
     font-size: 13.5335px;
     line-height: 150.84%;
-    margin-bottom: 30.81px;
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: auto;
+    margin-right: auto;
     color: #9a9a9a;
     order: 1;
   }

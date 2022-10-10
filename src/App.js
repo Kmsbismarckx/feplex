@@ -8,14 +8,14 @@ import Start from "./pages/Start";
 import Ban from "./pages/Ban";
 
 function App() {
-  const { isMobile, isFooter } = useMatchMedia();
+  const { isMobile, isFooter, isIphoneSE } = useMatchMedia();
   const [isVisible, setIsVisible] = useState(false);
 
   return (
     <div className="App">
       <Router>
         <globalContext.Provider
-          value={{ isMobile, isVisible, setIsVisible, isFooter }}
+          value={{ isMobile, isVisible, setIsVisible, isFooter, isIphoneSE }}
         >
           {isVisible && <div className="blur" />}
           <Routes>
