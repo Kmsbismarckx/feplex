@@ -204,6 +204,7 @@
   padding: 17px 43px 25px;
   height: 64px;
   order: -1;
+  margin-right: 32px;
 }
 .pay-modal .pay-modal__content .pay-modal__footer .modal__footer_button p {
   background: linear-gradient(180deg, #ffffff 55.73%, #aa3504 100%);
@@ -257,7 +258,6 @@
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 34px;
   }
 }
 @media screen and (max-width: 1024px) and (min-width: 600px) {
@@ -370,6 +370,7 @@
     height: 64px;
     order: 1;
     margin-bottom: 22px;
+    margin-right: 0;
   }
   .pay-modal .pay-modal__content .pay-modal__footer .modal__footer_button p {
     background: linear-gradient(180deg, #ffffff 55.73%, #aa3504 100%);

@@ -35,7 +35,11 @@
   background: #994927;
   border: none;
   border-radius: 50px;
-  color: black;
+  color: white;
+}
+
+.input::placeholder {
+  color: white;
 }
 
 /*# sourceMappingURL=Input.css.map */

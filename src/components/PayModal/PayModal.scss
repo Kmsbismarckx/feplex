@@ -210,6 +210,7 @@
         padding: 17px 43px 25px;
         height: 64px;
         order: -1;
+        margin-right: 32px;
         p {
           background: linear-gradient(180deg, #ffffff 55.73%, #aa3504 100%);
           -webkit-background-clip: text;
@@ -263,7 +264,6 @@
           justify-content: center;
           flex-direction: column;
           align-items: center;
-          margin-bottom: 34px;
 
           @media screen and (min-width: 600px) {
             .pay-modal__content_header_info {
@@ -374,6 +374,7 @@
           height: 64px;
           order: 1;
           margin-bottom: 22px;
+          margin-right: 0;
           p {
             background: linear-gradient(180deg, #ffffff 55.73%, #aa3504 100%);
             -webkit-background-clip: text;

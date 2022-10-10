@@ -51,6 +51,12 @@ const BanModal = ({ setModal, isMobile, nickname }) => {
                   <span>Разблокировка</span> на аккаунт <span>{nickname}</span>
                 </p>
               </div>
+              <hr
+                style={{
+                  alignSelf: "center",
+                  width: "314px",
+                }}
+              />
             </div>
           ) : (
             <div className="pay-modal__content_header">

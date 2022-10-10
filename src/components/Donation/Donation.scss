@@ -28,6 +28,13 @@
         margin-right: 14.32px;
       }
     }
+    .donation__input::placeholder {
+      color: white;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 18.0665px;
+      line-height: 22px;
+    }
     .donation__input_wrapper::before {
       content: url("/public/media/man-icon.svg");
       display: flex;

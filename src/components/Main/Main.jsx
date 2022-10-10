@@ -58,12 +58,17 @@ const Main = () => {
       isSelected: false,
       active: "",
     },
-    { name: "Монеты", data: [], isSelected: false, active: "" },
+    {
+      name: "Монеты",
+      data: [...donationItemsData[1]],
+      isSelected: false,
+      active: "",
+    },
   ]);
   const [donationItems, setDonationItems] = useState(categories[0].data);
   const [modal, setModal] = useState(false);
 
-  const { isMobile } = useContext(globalContext);
+  const { isMobile, isHD } = useContext(globalContext);
   const { nick } = useParams();
 
   useModalScroll(modal);
@@ -75,6 +80,7 @@ const Main = () => {
         {isMobile ? (
           <DonationPC
             isMobile={isMobile}
+            isHD={isHD}
             categories={categories}
             setCategories={setCategories}
             donationItems={donationItems}

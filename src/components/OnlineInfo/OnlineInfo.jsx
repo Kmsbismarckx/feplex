@@ -9,7 +9,7 @@ const OnlineInfo = () => {
         <h1 className="online-info__online">409 ИГРОКОВ</h1>
         <p className="online-info__text">сейчас на сервере</p>
         <Button className="online-info__button">
-          <p className="button__text">Feplex.com, 19132</p>
+          <p className="button__text">FEPLEX.COM 19132</p>
         </Button>
       </div>
     </div>

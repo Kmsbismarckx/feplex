@@ -43,7 +43,7 @@ const Ban = () => {
                 }}
                 className="ban-page__input input"
                 type="text"
-                placeholder="Введите ваш ник-нейм"
+                placeholder="Введите Ban ID"
               />
               <Link to={""}>
                 <Button className="ban-page__input_button input__button">
@@ -55,7 +55,7 @@ const Ban = () => {
                         setModal(true);
                       }
                     }}
-                    src="/media/arrow-icon.svg"
+                    src="/media/input-button-arrow.svg"
                     alt=""
                   />
                 </Button>

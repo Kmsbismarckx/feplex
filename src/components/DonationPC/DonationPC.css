@@ -22,6 +22,7 @@
   font-weight: 700;
   font-size: 33.766px;
   line-height: 41px;
+  overflow: hidden;
   color: #ffffff;
 }
 .donation-pc .donation-pc__header .donation-pc__header_nickname {
@@ -29,9 +30,14 @@
   align-items: center;
   flex-grow: 8;
   margin-bottom: 24px;
+  width: available;
+  overflow: hidden;
 }
 .donation-pc .donation-pc__header .donation-pc__header_nickname img {
   margin-right: 16.35px;
+}
+.donation-pc .donation-pc__header .donation-pc__header_nickname p {
+  text-overflow: ellipsis;
 }
 .donation-pc .donation-pc__header .donation-pc__header_goods {
   display: flex;
@@ -61,6 +67,12 @@
   .donation-pc .donation-pc__header {
     display: flex;
     flex-direction: column;
+  }
+  .donation-pc .donation-pc__header .donation-pc__header_nickname {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 23.5912px;
+    line-height: 29px;
   }
   .donation-pc .donation-pc__header .donation-pc__header_goods {
     overflow: scroll;
@@ -93,8 +105,8 @@
   .donation-pc .donation-pc__footer .donation-pc__footer_item_indicators .donation-pc__footer_indicator:not(:last-child) {
     margin-right: 5px;
   }
-  .donation-pc .donation-pc__footer .all__pages_container .donation-pc__footer_item {
-    min-width: 328px;
+  .donation-pc .donation-pc__footer .customSwiper .donation-pc__footer_item {
+    max-width: 328px;
     margin-top: 33.9px;
   }
 }

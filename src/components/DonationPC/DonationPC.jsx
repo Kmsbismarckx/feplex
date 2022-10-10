@@ -1,9 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./DonationPC.css";
 import DonationItem from "../DonationItem/DonationItem";
 import { useParams } from "react-router-dom";
 import DonationHeader from "../DonationHeader/DonationHeader";
-import Slider from "../Slider/Slider";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
+import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
+import "../../style/Swiper.css";
 
 const DonationPc = ({
   categories,
@@ -11,11 +17,13 @@ const DonationPc = ({
   donationItems,
   setDonationItems,
   isMobile,
+  isHD,
   modal,
   setModal,
 }) => {
   const { nick } = useParams();
-  const [currentPage, setCurrentPage] = useState(1);
+  const [currentPage, setCurrentPage] = useState(0);
+  console.log(isHD, isMobile);
 
   return (
     <div className="donation-pc__container">
@@ -32,24 +40,36 @@ const DonationPc = ({
         {!isMobile && <hr />}
         {isMobile ? (
           <div className="donation-pc__footer">
-            <Slider currentPage={currentPage} setCurrentPage={setCurrentPage}>
+            <Swiper
+              modules={[Navigation, Pagination]}
+              effect
+              speed={800}
+              slidesPerView={1}
+              loop
+              pagination
+              className={"customSwiper"}
+              onSlideChange={(swiper) => {
+                setCurrentPage(swiper.realIndex);
+              }}
+            >
               {donationItems.map((item) => {
                 return (
-                  <DonationItem
-                    className={"donation-pc__footer_item"}
-                    key={item.value}
-                    item={item}
-                    modal={modal}
-                    setModal={setModal}
-                  >
-                    {item.value}
-                  </DonationItem>
+                  <SwiperSlide key={item.value}>
+                    <DonationItem
+                      className={`slider donation-pc__footer_item`}
+                      item={item}
+                      modal={modal}
+                      setModal={setModal}
+                    >
+                      {item.value}
+                    </DonationItem>
+                  </SwiperSlide>
                 );
               })}
-            </Slider>
+            </Swiper>
             <div className={`donation-pc__footer_item_indicators`}>
               {donationItems.map((item, index) => {
-                if (index + 1 === currentPage) {
+                if (index === currentPage) {
                   return (
                     <div
                       key={item.value}

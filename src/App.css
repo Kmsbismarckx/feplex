@@ -30,6 +30,7 @@ a {
   margin-top: 70px;
   background-size: auto, auto, auto, auto, auto;
   animation: floating ease-in-out 5s infinite;
+  color: white;
 }
 .App .start {
   margin-top: 70px;
@@ -74,7 +75,7 @@ a {
 .App .ban-page .ban-page__wrapper {
   padding-bottom: 210px;
   padding-top: 35px;
-  background: url("/public/media/ban-page-background-bricks.png") no-repeat bottom center, url("/public/media/ban-page-background-large.png") no-repeat center;
+  background: url("/public/media/ban-page-background-bricks.png") no-repeat bottom -5px center, url("/public/media/ban-page-background-large.png") no-repeat center;
   background-size: contain, cover;
 }
 .App .ban-page .header {
@@ -111,7 +112,23 @@ a {
 }
 .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper {
   max-width: 433px;
+  height: 71.1px;
   box-shadow: none;
+}
+.App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper .ban-page__input {
+  color: white;
+}
+.App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper .ban-page__input_button {
+  width: 71.73px;
+  height: 71.73px;
+  box-shadow: none;
+}
+.App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper .ban-page__input::placeholder {
+  color: white;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18.0665px;
+  line-height: 22px;
 }
 .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper::before {
   content: url("/public/media/man-icon.svg");
@@ -151,7 +168,7 @@ a {
 .App .ban-page .ban-page__art-area .ban-page__background-bricks {
   width: 100%;
   position: absolute;
-  bottom: 0;
+  bottom: -3px;
   left: 0;
 }
 
@@ -220,6 +237,16 @@ a {
     text-align: center;
     width: 91%;
     max-width: 605px;
+  }
+  .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input::placeholder {
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.1972px;
+    line-height: 20px;
+  }
+  .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_button {
+    box-shadow: none;
   }
   .App .ban-page .ban-page__main .ban-page__main_container .ban-page__main_name {
     font-size: 19.68px;

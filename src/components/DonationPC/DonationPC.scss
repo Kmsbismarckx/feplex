@@ -23,6 +23,7 @@
     font-weight: 700;
     font-size: 33.766px;
     line-height: 41px;
+    overflow: hidden;
 
     color: #ffffff;
 
@@ -31,8 +32,14 @@
       align-items: center;
       flex-grow: 8;
       margin-bottom: 24px;
+      width: available;
+      overflow: hidden;
       img {
         margin-right: 16.35px;
+      }
+
+      p {
+        text-overflow: ellipsis;
       }
     }
 
@@ -69,6 +76,13 @@
     .donation-pc__header {
       display: flex;
       flex-direction: column;
+
+      .donation-pc__header_nickname {
+        font-style: normal;
+        font-weight: 700;
+        font-size: 23.5912px;
+        line-height: 29px;
+      }
       .donation-pc__header_goods {
         overflow: scroll;
         .donation-pc__header_goods_item:not(:last-child) {
@@ -100,9 +114,9 @@
           margin-right: 5px;
         }
       }
-      .all__pages_container {
+      .customSwiper {
         .donation-pc__footer_item {
-          min-width: 328px;
+          max-width: 328px;
           margin-top: 33.9px;
         }
       }

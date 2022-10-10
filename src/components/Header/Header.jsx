@@ -17,7 +17,14 @@ const Header = () => {
   return (
     <div className="container">
       <div className="header">
-        <Link to={"/"} style={{ zIndex: 6 }} className="header__logo">
+        <Link
+          to={"/"}
+          onClick={() => {
+            setIsVisible(false);
+          }}
+          style={{ zIndex: 6 }}
+          className="header__logo"
+        >
           <img
             className="header__logo_img"
             src="/media/header-logo.svg"
