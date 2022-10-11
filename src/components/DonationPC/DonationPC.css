@@ -4,20 +4,22 @@
   margin: 0 auto;
   display: flex;
   flex-direction: column;
+  border-radius: 49.7748px;
+  background: linear-gradient(0deg, #fca554 13.62%, rgba(237, 137, 45, 0) 100%);
+  padding: 1.53px;
 }
 
 .donation-pc {
   background: linear-gradient(180deg, #9c4b28 0%, #4a200e 105.16%);
   box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
+  padding: 55.44px 135.11px 93.39px;
+  max-width: 1580px;
   border-radius: 49.7748px;
-  padding: 55px 8% 93px;
-  margin-right: 10px;
-  margin-left: 10px;
 }
 .donation-pc .donation-pc__header {
   display: flex;
   justify-content: space-between;
-  padding-bottom: 49px;
+  padding-bottom: 49.48px;
   font-style: normal;
   font-weight: 700;
   font-size: 33.766px;
@@ -29,7 +31,6 @@
   display: flex;
   align-items: center;
   flex-grow: 8;
-  margin-bottom: 24px;
   width: available;
   overflow: hidden;
 }
@@ -41,12 +42,15 @@
 }
 .donation-pc .donation-pc__header .donation-pc__header_goods {
   display: flex;
-  justify-content: space-between;
+  justify-content: end;
   font-style: normal;
   font-weight: 700;
   font-size: 20px;
   line-height: 24px;
   flex-grow: 4;
+}
+.donation-pc .donation-pc__header .donation-pc__header_goods_item:not(:last-child) {
+  margin-right: 27px;
 }
 .donation-pc hr {
   height: 2.3px;
@@ -60,29 +64,60 @@
   row-gap: 60px;
   justify-content: center;
   align-items: center;
-  margin-top: 65px;
+  margin-top: 33.33px;
+}
+.donation-pc .donation-pc__footer .donation-pc__footer_item_footer {
+  margin-top: 11.21px;
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1600px) {
+  .donation-pc__container {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
   .donation-pc .donation-pc__header {
     display: flex;
     flex-direction: column;
+  }
+  .donation-pc .donation-pc__header .donation-pc__header_nickname {
+    margin-bottom: 20px;
+  }
+  .donation-pc .donation-pc__header .donation-pc__header_goods {
+    justify-content: center;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .donation-pc {
+    padding: 24.12px 0 55.91px;
   }
   .donation-pc .donation-pc__header .donation-pc__header_nickname {
     font-style: normal;
     font-weight: 700;
     font-size: 23.5912px;
     line-height: 29px;
+    margin-left: 53.96px;
   }
+}
+@media screen and (max-width: 1024px) and (max-width: 440px) {
+  .donation-pc .donation-pc__header .donation-pc__header_goods {
+    justify-content: start;
+  }
+}
+@media screen and (max-width: 1024px) {
   .donation-pc .donation-pc__header .donation-pc__header_goods {
     overflow: scroll;
+    margin-left: 17.66px;
   }
-  .donation-pc .donation-pc__header .donation-pc__header_goods .donation-pc__header_goods_item:not(:last-child) {
+  .donation-pc .donation-pc__header .donation-pc__header_goods .donation-pc__header_goods_item {
     margin-right: 10px;
   }
+}
+@media screen and (max-width: 1024px) {
   .donation-pc .donation-pc__header .donation-pc__header_goods::-webkit-scrollbar {
     display: none;
   }
+}
+@media screen and (max-width: 1024px) {
   .donation-pc .donation-pc__footer {
     display: flex;
     justify-content: center;

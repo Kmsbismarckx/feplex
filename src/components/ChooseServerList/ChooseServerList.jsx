@@ -10,6 +10,7 @@ const ChooseServerList = ({ className, serverItems, isMobile }) => {
           if (index < 3) {
             return (
               <ChooseServerItem
+                key={index}
                 className={"choose-server__list_item"}
                 props={item}
               />
@@ -21,9 +22,10 @@ const ChooseServerList = ({ className, serverItems, isMobile }) => {
   }
   return (
     <div className={className}>
-      {serverItems.map((item) => {
+      {serverItems.map((item, index) => {
         return (
           <ChooseServerItem
+            key={index}
             className={"choose-server__list_item"}
             props={item}
           />

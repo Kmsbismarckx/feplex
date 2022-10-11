@@ -18,15 +18,18 @@
   flex-direction: column;
 }
 .footer .contact-info .contact-info__item {
-  font-style: normal;
-  font-weight: 600;
-  font-size: 16.0051px;
-  line-height: 150.84%;
   color: #9a9a9a;
+  font-size: 16.01px;
+  font-weight: 400;
+  line-height: 24.14px;
 }
 .footer .contact-info .contact-info__item:first-child,
 .footer .contact-info .contact-info__item:nth-child(2) {
   color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16.0051px;
+  line-height: 150.84%;
 }
 .footer .footer__down {
   display: flex;

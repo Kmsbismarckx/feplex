@@ -1,5 +1,9 @@
 @import "../../style/variables.css";
 .start-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: start;
   position: relative;
   background-repeat: no-repeat !important;
   background-position: top 50px left 0 !important;
@@ -17,8 +21,8 @@
   line-height: 36.83px;
   margin-bottom: 25px;
 }
-.start-item .start-item__button {
-  padding: 18px 36px 18px 36px;
+.start-item .start-item__button button {
+  padding: 18px 36px 24px 36px;
 }
 .start-item .start-item__button p {
   font-style: normal;
@@ -41,6 +45,12 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
+  }
+  .start-item__button p {
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18.2618px;
+    line-height: 22px;
   }
 }
 

@@ -1,7 +1,10 @@
 @import "../../style/variables.css";
+
 .donation-pc__footer_item {
   background: #572611;
   border-radius: 29.8137px;
+  margin-top: 33.9px;
+  height: calc(400px - 33.9px);
   .line {
     background: #7b4025;
     height: 2px;
@@ -15,8 +18,8 @@
 
     .donation-pc__footer_item_header_img {
       position: absolute;
-      left: 34px;
-      top: -32px;
+      left: 38.31px;
+      top: -33.9px;
       width: auto;
       height: auto;
       border-radius: 39.1837px;
@@ -39,7 +42,6 @@
     flex-direction: column;
     align-items: center;
     padding-top: 11px;
-    padding-bottom: 15px;
     .donation-pc__footer_item_footer_item {
       margin-bottom: 17.88px;
       h2 {
@@ -65,12 +67,17 @@
     .donation-pc__footer_item_button {
       width: 104px;
       height: 40px;
-      background: white;
       box-shadow: none;
-      font-style: normal;
-      font-weight: 600;
-      font-size: 17.0364px;
-      line-height: 21px;
+      padding: 0;
+
+      button {
+        background: white;
+        box-shadow: none;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 17.0364px;
+        line-height: 21px;
+      }
     }
   }
 }
@@ -88,14 +95,18 @@
       font-size: 24.4834px;
       line-height: 30px;
       color: #ffffff;
+      span {
+        background: linear-gradient(180deg, #ffb800 0%, #ff7e00 100%),
+          linear-gradient(0deg, #ffffff, #ffffff);
+        background-clip: text;
+        color: transparent;
+      }
     }
-    p:after {
-      content: attr(data-text);
-      transform: translateX(-100%);
-      position: absolute;
-      background: linear-gradient(180deg, #c18e08 0%, #bd570e 100%);
-      background-clip: text;
-      color: transparent;
-    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .donation-pc__footer_item {
+    padding-bottom: 15px;
   }
 }

@@ -1,4 +1,5 @@
 @import "../../style/variables.css";
+
 .pay-modal {
   display: flex;
   justify-content: center;
@@ -13,24 +14,37 @@
   background: rgba(0, 0, 0, 0.7);
   backdrop-filter: blur(12.5px);
   z-index: 10;
-
+  .pay-modal__container {
+    max-height: 90%;
+    width: 1160px;
+    padding: 1.53px;
+    border-radius: 49.7748px;
+    background: linear-gradient(
+      0deg,
+      #fca554 13.62%,
+      rgba(237, 137, 45, 0) 100%
+    );
+    overflow: auto;
+  }
+  .pay-modal__container::-webkit-scrollbar {
+    display: none;
+  }
+  .pay-modal__content::-webkit-scrollbar {
+    display: none;
+  }
   .pay-modal__content {
     display: flex;
     flex-direction: column;
     position: relative;
-    max-height: 90%;
-    width: 1160px;
     background: linear-gradient(180deg, #9c4b28 0%, #4a200e 105.16%);
-    border-radius: 49.7748px;
+    border-radius: inherit;
 
-    padding-top: 27px;
-    padding-left: 17px;
-    padding-right: 17px;
-
-    color: white;
+    padding-top: 52px;
     overflow: scroll;
+    color: white;
     .container {
       width: 560px;
+      margin: 0 auto;
       hr {
         border: none;
         background: #532410;
@@ -65,14 +79,18 @@
             position: absolute;
             top: 34.75px;
             right: 28.63px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            box-shadow: none;
             width: 48.63px;
             height: 48.64px;
-            box-shadow: none;
-            background: #532410;
             z-index: 5;
+            padding: 0;
+            button {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+              box-shadow: none;
+              background: #532410;
+            }
           }
         }
         .pay-modal__info {
@@ -96,16 +114,22 @@
       }
 
       .pay-modal__content_footer {
-        padding-top: 35px;
+        padding-top: 44px;
+        .pay-modal__confirmation {
+          margin-bottom: 29.79px;
+        }
         .pay-modal__input_wrapper {
           position: relative;
           width: 100%;
-          height: 55.48px;
-          background: #ffffff;
+          height: 79.41px;
           border-radius: 50px;
-          margin-bottom: 38.44px;
-          .pay-modal__input::placeholder {
+          .pay-modal__input {
+            padding-left: calc(91.6px + 22.49px);
             color: white;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 20px;
+            line-height: 24px;
           }
           .pay-modal__input_background {
             position: absolute;
@@ -113,12 +137,13 @@
             left: -62.15px;
           }
         }
+        .pay-modal__input_wrapper:first-child {
+          margin-bottom: 22px;
+        }
         .pay-modal__input_wrapper::before {
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          content: "";
           position: absolute;
-          width: 61px;
+          width: 91.63px;
           height: 100%;
           top: 0;
           left: 0;
@@ -127,11 +152,28 @@
           border-bottom-left-radius: inherit;
           border-top-left-radius: inherit;
         }
-        .pay-modal__input_wrapper1::before {
-          content: url("/public/media/input-arrow.svg");
+
+        .pay-modal__input_wrapper1::after {
+          top: 24.87px;
+          left: 39.89px;
+          content: " ";
+          position: absolute;
+          background: url("/public/media/input-arrow.svg") no-repeat;
+
+          background-size: cover;
+
+          width: 32.97px;
+          height: 29.67px;
         }
-        .pay-modal__input_wrapper2::before {
-          content: url("/public/media/input-promo.svg");
+        .pay-modal__input_wrapper2::after {
+          top: 24.87px;
+          left: 39.89px;
+          position: absolute;
+          content: " ";
+          background: url("/public/media/input-promo.svg");
+          background-size: cover;
+          width: 32.97px;
+          height: 26.38px;
         }
         .pay-modal__categories {
           display: flex;
@@ -140,7 +182,7 @@
           font-weight: 700;
           font-size: 14.6244px;
           line-height: 18px;
-          margin-bottom: 33.44px;
+          margin-bottom: 25.21px;
           .pay-modal__category {
             text-align: center;
             width: fit-content;
@@ -152,6 +194,11 @@
             border: 3.6561px solid #572611;
             border-radius: 49.7748px;
             margin-right: 10px;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 14.6244px;
+            line-height: 18px;
           }
         }
         .pay-variant__name {
@@ -159,21 +206,25 @@
           font-weight: normal;
           font-size: 24px;
           line-height: 29px;
-          margin-bottom: 19px;
+          margin-bottom: 29.96px;
         }
         .pay-modal__pay-variants {
           display: grid;
           width: 100%;
           grid-template-columns: repeat(4, auto);
-          justify-content: space-evenly;
+          justify-content: space-between;
           column-gap: 13px;
           row-gap: 20px;
           align-items: center;
-          margin-bottom: 33px;
+          margin-bottom: 35.56px;
           .pay-modal__pay-variant {
-            width: 100%;
-            height: 100%;
+            width: 126.7px;
+            height: 80.24px;
+            border: 3.23px solid white;
             border-radius: 19.3582px;
+            cursor: pointer;
+            background: url("/public/media/payment/payment-icon.svg") no-repeat
+              center;
           }
           .pay-modal__active {
             background-color: white;
@@ -184,12 +235,10 @@
     .pay-modal__footer {
       background: linear-gradient(180deg, #461b08 0%, #4a200e 105.16%);
       box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
-      border-radius: 49.7748px;
+      border-radius: inherit;
       display: flex;
       align-items: center;
       justify-content: center;
-      margin-left: -17px;
-      margin-right: -17px;
       padding-top: 40px;
       padding-bottom: 55px;
       .modal__footer_checkbox-area {
@@ -202,15 +251,19 @@
         font-size: 14px;
         line-height: 17px;
         .checkbox__container {
-          transform: translateY(-10px);
+          width: 25px;
+          height: 25px;
         }
       }
       .modal__footer_button {
         width: 277px;
-        padding: 17px 43px 25px;
         height: 64px;
         order: -1;
         margin-right: 32px;
+        box-shadow: none;
+        b {
+          padding: 17px 43px 25px;
+        }
         p {
           background: linear-gradient(180deg, #ffffff 55.73%, #aa3504 100%);
           -webkit-background-clip: text;
@@ -235,11 +288,14 @@
 @media screen and (max-width: 1024px) {
   .pay-modal {
     overflow: scroll;
+    padding-top: 27.9px;
+    padding-left: 15.83px;
+    padding-right: 15.83px;
     .pay-modal__content {
       display: flex;
       flex-direction: column;
       position: relative;
-      width: 91.5%;
+      width: 100%;
       background: linear-gradient(180deg, #9c4b28 0%, #4a200e 105.16%);
       border-radius: 49.7748px;
 
@@ -254,6 +310,8 @@
       .container {
         width: 100%;
         max-width: 420px;
+        display: flex;
+        flex-direction: column;
         hr {
           border: none;
           background: #532410;
@@ -264,7 +322,8 @@
           justify-content: center;
           flex-direction: column;
           align-items: center;
-
+          width: 311.74px;
+          align-self: center;
           @media screen and (min-width: 600px) {
             .pay-modal__content_header_info {
               padding-right: 0 !important;
@@ -276,7 +335,7 @@
             width: 100%;
             align-items: center;
             padding-right: 70px;
-            margin-bottom: 27px;
+            margin-bottom: 27.71px;
           }
           .pay-modal__info {
             width: 314px;
@@ -302,22 +361,69 @@
 
         .pay-modal__content_footer {
           width: 100%;
+          padding-top: 35.3px;
+          .pay-modal__confirmation {
+            margin-bottom: 22.73px;
+            .pay-modal__input_wrapper {
+              height: 50.18px;
+              border-radius: 31.6px;
+            }
+            .pay-modal__input {
+              padding-left: calc(57.9px + 14.21px);
+              font-style: normal;
+              font-weight: 400;
+              font-size: 12.6376px;
+              line-height: 15px;
+            }
+            .pay-modal__input_wrapper:first-child {
+              margin-bottom: 14px;
+            }
+            .pay-modal__input_wrapper::before {
+              display: block;
+              width: 57.9px;
+              height: 100%;
+            }
+            .pay-modal__input_wrapper1::after {
+              display: block;
+              top: 15.71px;
+              left: 25.21px;
+
+              width: 20.83px;
+              height: 18.75px;
+            }
+            .pay-modal__input_wrapper2::after {
+              display: block;
+              top: 16.76px;
+              left: 25.21px;
+
+              width: 20.83px;
+              height: 16.67px;
+            }
+          }
           .pay-modal__categories {
             display: flex;
-            justify-content: space-evenly;
+            justify-content: space-between;
             font-style: normal;
             font-weight: 700;
             font-size: 14.6244px;
             line-height: 18px;
             margin-bottom: 33.44px;
             .pay-modal__category {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14.6244px;
+              line-height: 18px;
+
+              flex-grow: 1;
+
               text-align: center;
               width: fit-content;
               height: fit-content;
               display: flex;
               align-items: center;
               justify-content: center;
-              padding: 14px 19px;
+              padding: calc(19px - 3.661px) calc(14.62px - 3.661px);
+              margin-right: 9.51px;
               border: 3.6561px solid #572611;
               border-radius: 49.7748px;
             }
@@ -339,6 +445,11 @@
             row-gap: 20px;
             align-items: center;
             margin-bottom: 33px;
+            .pay-modal__pay-variant {
+              width: 97.94px;
+              height: 62.03px;
+              background-size: 25.56px 26.19px;
+            }
           }
         }
       }
@@ -364,13 +475,9 @@
           font-size: 14px;
           line-height: 17px;
           margin-bottom: 21px;
-          .checkbox__container {
-            transform: translateY(-10px);
-          }
         }
         .modal__footer_button {
           width: 277px;
-          padding: 17px 43px 25px;
           height: 64px;
           order: 1;
           margin-bottom: 22px;

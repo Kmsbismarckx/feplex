@@ -10,7 +10,7 @@ import Ban from "./pages/Ban";
 function App() {
   const { isMobile, isFooter, isIphoneSE, isHD } = useMatchMedia();
   const [isVisible, setIsVisible] = useState(false);
-  console.log(isMobile, isFooter, isIphoneSE, isHD);
+
   return (
     <div className="App">
       <Router>

@@ -2,6 +2,20 @@
 .donation-container {
   max-width: 1160px;
   margin: 0 auto;
+  border-radius: 49.7748px;
+  padding: 1.53px;
+
+  background: linear-gradient(0deg, #fca554 13.62%, rgba(237, 137, 45, 0) 100%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@media screen and (max-width: 1170px) {
+  .donation-container {
+    margin: 0 10px;
+  }
 }
 
 .donation {
@@ -12,7 +26,7 @@
   color: white;
   background: linear-gradient(180deg, #9c4b28 0%, #4a200e 100%);
   box-shadow: inset 0px -7.65766px 0px rgba(0, 0, 0, 0.25);
-  border-radius: 49.7748px;
+  border-radius: inherit;
 
   width: 100%;
   height: 406.97px;
@@ -20,7 +34,6 @@
   .donation__header {
     width: 480px;
     margin-left: 100px;
-    flex-grow: 2;
     .donation__name {
       display: flex;
       margin-bottom: 23.38px;
@@ -28,16 +41,34 @@
         margin-right: 14.32px;
       }
     }
-    .donation__input::placeholder {
-      color: white;
-      font-style: normal;
-      font-weight: 400;
-      font-size: 18.0665px;
-      line-height: 22px;
+    .donation__input_wrapper {
+      border-radius: 50px;
+      height: 79.41px;
+      input {
+        background-color: white;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 24px;
+        color: #2d2d2d;
+
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+          0px 4px 4px rgba(0, 0, 0, 0.25);
+        padding-left: 40px;
+        padding-right: 0;
+
+        border-radius: inherit;
+      }
+      .donation__background {
+        position: absolute;
+        bottom: -100px;
+        left: -80px;
+      }
     }
+
     .donation__input_wrapper::before {
       content: url("/public/media/man-icon.svg");
-      display: flex;
+      display: none;
       align-items: center;
       justify-content: center;
       position: absolute;
@@ -50,14 +81,32 @@
       border-bottom-left-radius: inherit;
       border-top-left-radius: inherit;
     }
-    .donation__input_button::after {
-      content: url("/public/media/input-button-arrow.svg");
+    .button__link {
       position: absolute;
-      top: 17.96px;
-      left: 14.26px;
-
-      width: 25.15px;
-      height: 16.77px;
+      top: -1px;
+      right: -1px;
+    }
+    .donation__input_button {
+      position: static;
+      width: 80px;
+      height: 80px;
+      padding: 0;
+      button {
+        .input__button_img {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+    .donation__input_button::after {
+      content: "";
+      position: absolute;
+      top: 25.7px;
+      left: 20.41px;
+      background: url("/public/media/input-button-arrow.svg") no-repeat;
+      background-size: cover;
+      width: 36px;
+      height: 24px;
     }
   }
 
@@ -100,6 +149,10 @@
 }
 
 @media screen and (max-width: 1024px) {
+  .donation-container {
+    max-width: 407.5px;
+    margin: 0 auto;
+  }
   .donation {
     position: relative;
     display: flex;
@@ -113,8 +166,7 @@
     border-radius: 49.7748px;
 
     min-width: 350px;
-    max-width: 407.5px;
-    width: 90%;
+    width: 100%;
     height: auto;
 
     margin: 0 auto;
@@ -138,6 +190,23 @@
         border-radius: 34.9334px;
         margin-bottom: 38.44px;
         box-shadow: none;
+        .button__link {
+          top: 0;
+          right: 0;
+        }
+        .donation__input_button {
+          width: 55.48px;
+          height: 55.48px;
+        }
+        .donation__input_button:after {
+          position: absolute;
+          top: 17.96px;
+          left: 14.26px;
+
+          background-size: cover;
+          width: 25.15px;
+          height: 16.77px;
+        }
         .donation__background4 {
           position: absolute;
           top: 100px;
@@ -151,25 +220,47 @@
           background-color: inherit;
           border: none;
           border-radius: 34.9334px;
+
           color: white;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 13.9734px;
+          line-height: 17px;
+          text-shadow: none;
         }
         .donation__input::placeholder {
           color: white;
         }
       }
       .donation__input_wrapper::before {
-        content: url("/public/media/man-icon.svg");
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        display: block;
+        content: "";
         position: absolute;
-        width: 60.71px;
+
+        width: 57.9px;
         height: 100%;
+
         top: 0;
         left: 0;
+
         background: #532410;
-        border-bottom-left-radius: 34.9334px;
-        border-top-left-radius: 34.9334px;
+        border: none;
+        border-bottom-left-radius: inherit;
+        border-top-left-radius: inherit;
+      }
+
+      .donation__input_wrapper1::after {
+        content: "";
+        position: absolute;
+
+        width: 18.33px;
+        height: 22.91px;
+
+        top: 15.71px;
+        left: 25.21px;
+
+        background: url("/public/media/man-icon.svg") no-repeat;
+        background-size: cover;
       }
 
       .donation__input_button {
@@ -211,5 +302,10 @@
         bottom: 3.91px;
       }
     }
+  }
+}
+@media screen and (max-width: 424px) {
+  .donation-container {
+    margin: 0 5px;
   }
 }

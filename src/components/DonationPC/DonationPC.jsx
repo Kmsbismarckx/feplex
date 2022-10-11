@@ -17,13 +17,11 @@ const DonationPc = ({
   donationItems,
   setDonationItems,
   isMobile,
-  isHD,
   modal,
   setModal,
 }) => {
   const { nick } = useParams();
   const [currentPage, setCurrentPage] = useState(0);
-  console.log(isHD, isMobile);
 
   return (
     <div className="donation-pc__container">
@@ -61,7 +59,7 @@ const DonationPc = ({
                       modal={modal}
                       setModal={setModal}
                     >
-                      {item.value}
+                      {item}
                     </DonationItem>
                   </SwiperSlide>
                 );
@@ -90,6 +88,7 @@ const DonationPc = ({
         ) : (
           <div className="donation-pc__footer">
             {donationItems.map((item) => {
+              console.log(item);
               return (
                 <DonationItem
                   className={"donation-pc__footer_item"}
@@ -98,7 +97,7 @@ const DonationPc = ({
                   modal={modal}
                   setModal={setModal}
                 >
-                  {item.value}
+                  {item}
                 </DonationItem>
               );
             })}

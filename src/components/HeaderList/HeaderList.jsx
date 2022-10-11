@@ -15,14 +15,14 @@ const HeaderList = ({ className, isVisible, setIsVisible }) => {
         <img src="/media/header-list-item1.svg" alt="" />
         <p>Как начать игру</p>
       </Link>
-      <a className="header__list_item">
+      <Link to={"/"} className="header__list_item">
         <img src="/media/header-list-item2.svg" alt="" />
         <p>Магазин</p>
-      </a>
-      <a className="header__list_item">
+      </Link>
+      <Link to={"/"} className="header__list_item">
         <img src="/media/header-list-item3.svg" alt="" />
         <p>Контакты</p>
-      </a>
+      </Link>
     </div>
   );
 };

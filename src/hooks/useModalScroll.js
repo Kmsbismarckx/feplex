@@ -2,6 +2,6 @@ import { useEffect } from "react";
 
 export const useModalScroll = (modal) => {
   useEffect(() => {
-    document.body.style.overflow = modal ? "hidden" : "scroll";
+    document.body.style.overflow = modal ? "hidden" : "auto";
   }, [modal]);
 };

@@ -42,8 +42,11 @@
 }
 .download-game .container .download-game__info .download-game__button {
   align-self: start;
-  padding: 18px 38px 18px 38px;
   color: white;
+  box-shadow: none;
+}
+.download-game .container .download-game__info .download-game__button button {
+  padding: 18px 38px 18px 38px;
 }
 .download-game .container .download-game__info .download-game__button p {
   font-style: normal;

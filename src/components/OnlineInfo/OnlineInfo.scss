@@ -40,11 +40,12 @@
   .online-info__button {
     width: 400px;
     height: 91px;
+    box-shadow: none;
     .button__text {
-		font-style: normal;
-		font-weight: 600;
-		font-size: 25px;
-		line-height: 30px;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
     }
   }
 }

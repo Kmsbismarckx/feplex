@@ -21,7 +21,7 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
             <h2>Покупка доната</h2>
           </div>
 
-          <div className="donation__input_wrapper input__wrapper">
+          <div className="donation__input_wrapper donation__input_wrapper1 input__wrapper">
             <Input
               pattern={"[A-Za-zА-Яа-яЁё]{6,}"}
               onChange={(e) => {
@@ -37,18 +37,14 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
               src="/media/donation-item5.png"
               alt=""
             />
-            <Link to={`/general/${value}`}>
-              <Button className="donation__input_button input__button">
-                <img
-                  className="input__button_img"
-                  onClick={() => {
-                    localStorage.setItem("nick", value);
-                    setNickname(value);
-                  }}
-                  src="/media/input-button-circle.svg"
-                  alt=""
-                />
-              </Button>
+            <Link className={"button__link"} to={`/general/${value}`}>
+              <Button
+                className="donation__input_button input__button"
+                onClick={() => {
+                  localStorage.setItem("nick", value);
+                  setNickname(value);
+                }}
+              ></Button>
             </Link>
           </div>
         </div>

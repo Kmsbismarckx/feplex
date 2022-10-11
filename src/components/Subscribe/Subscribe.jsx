@@ -14,7 +14,7 @@ const Subscribe = ({ chestWidth, chestHeight }) => {
           />
           <img
             className="subscribe__background_item"
-            src="/media/subscribe-item1.png"
+            src="/media/subscribe-item1.svg"
             alt=""
             width={chestWidth}
             height={chestHeight}

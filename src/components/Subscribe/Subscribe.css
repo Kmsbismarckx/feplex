@@ -9,6 +9,8 @@
 .subscribe .container {
   display: flex;
   align-items: center;
+  margin: 0 auto;
+  max-width: 1160px;
 }
 .subscribe .subscribe__background {
   margin-top: 42px;
@@ -31,7 +33,7 @@
   right: -41px;
 }
 .subscribe .subscribe__description {
-  margin-left: 16.57px;
+  margin-left: 52.05px;
 }
 .subscribe .subscribe__description .subscribe__description_name {
   font-style: normal;
@@ -43,10 +45,15 @@
 }
 .subscribe .subscribe__description .subscribe__description_name span {
   display: inline-block;
-  padding: 5.84px 17.71px 5.99px 17.62px;
+  padding: 9.4px 28.3px;
   background: #ffffff;
   border-radius: 8.09242px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 27.094px;
+  line-height: 42px;
   color: #572611;
+  margin-left: 24px;
 }
 .subscribe .subscribe__description_details {
   font-style: normal;
@@ -58,8 +65,10 @@
 }
 
 .subscribe__button {
-  margin-left: 16.57px;
   width: fit-content;
+  padding: 1.24px;
+}
+.subscribe__button button {
   padding: 24px 50px 37px;
 }
 .subscribe__button .button__text {
@@ -111,8 +120,10 @@
   .subscribe__button {
     margin-left: 16.57px;
     width: 249px;
-    padding: 15px 30px 22px;
     height: 56.85px;
+  }
+  .subscribe__button button {
+    padding: 15px 30px 22px;
   }
   .subscribe__button .button__text {
     font-style: normal;

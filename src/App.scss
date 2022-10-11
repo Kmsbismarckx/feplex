@@ -9,6 +9,7 @@
 body {
   background: linear-gradient(180deg, #c18e08 0%, #bd570e 100%);
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 a {
@@ -41,11 +42,12 @@ a {
 }
 
 .App {
+  overflow-x: hidden;
   .general {
     margin-top: 70px;
     background-size: auto, auto, auto, auto, auto;
     animation: floating ease-in-out 5s infinite;
-	  color: white;
+    color: white;
   }
   .start {
     margin-top: 70px;
@@ -75,8 +77,9 @@ a {
 
       padding-top: 70.45px;
       padding-bottom: 68px;
-      .container {
+      .choose-server__container {
         width: 83%;
+        margin: 0 auto;
         .choose-server__name {
           font-style: normal;
           font-weight: 600;
@@ -99,9 +102,16 @@ a {
 
       background-size: contain, cover;
     }
-    .header {
-      margin-top: 0;
-      margin-bottom: 59px;
+    .header__container {
+      background: linear-gradient(
+        90deg,
+        #fca554 70.97%,
+        rgba(237, 137, 45, 0) 166.37%
+      );
+
+      .header {
+        margin-top: 0;
+      }
     }
     .ban-page__main {
       display: flex;
@@ -110,7 +120,6 @@ a {
       margin: 0 auto;
 
       flex-direction: column;
-      padding-bottom: 135px;
       .ban-page__main_container {
         display: flex;
         justify-content: center;
@@ -118,6 +127,7 @@ a {
         align-self: end;
         flex-direction: column;
         width: 575px;
+        margin-top: 143.82px;
         .ban-page__main_name {
           font-size: 32px;
           font-weight: 700;
@@ -134,13 +144,20 @@ a {
           max-width: 433px;
           height: 71.1px;
           box-shadow: none;
+          background: transparent;
           .ban-page__input {
-            color: white;
+            padding-left: 97.37px;
+
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18.0665px;
+            line-height: 22px;
+            color: #ffffff;
           }
           .ban-page__input_button {
             width: 71.73px;
             height: 71.73px;
-			  box-shadow: none;
+            box-shadow: none;
           }
           .ban-page__input::placeholder {
             color: white;
@@ -151,18 +168,26 @@ a {
           }
         }
         .ban-page__input_wrapper::before {
-          content: url("/public/media/man-icon.svg");
-          display: flex;
-          align-items: center;
-          justify-content: center;
+          content: "";
           position: absolute;
-          width: 60.71px;
+          width: 78.49px;
           height: 100%;
           top: 0;
           left: 0;
           background: #532410;
-          border-bottom-left-radius: 34.9334px;
-          border-top-left-radius: 34.9334px;
+          border: none;
+          border-bottom-left-radius: inherit;
+          border-top-left-radius: inherit;
+        }
+        .ban-page__input_wrapper::after {
+          top: 21.22px;
+          left: 32.25px;
+          content: "";
+          position: absolute;
+          background: url("/public/media/man-icon.svg") no-repeat center;
+          background-size: cover;
+          width: 23.7px;
+          height: 29.62px;
         }
       }
     }
@@ -196,7 +221,15 @@ a {
     }
   }
 }
-
+@media screen and (max-width: 1200px) {
+  .App {
+    .ban-page {
+      .ban-page__art-area {
+        padding-top: 346px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1024px) {
   .App {
     .general {
@@ -242,14 +275,13 @@ a {
       .ban-page__wrapper {
         padding-top: 35px;
         padding-bottom: 134px;
-        max-height: 508px;
         background: url("/public/media/ban-page-background-small.png") no-repeat
           center;
         background-size: cover;
       }
       .header {
         margin-top: 0;
-        margin-bottom: 59px;
+        margin-bottom: 0;
       }
       .ban-page__main {
         display: flex;
@@ -257,7 +289,12 @@ a {
         align-items: center;
 
         flex-direction: column;
-        padding-bottom: 135px;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16.1972px;
+        line-height: 20px;
+
+        color: #ffffff;
         .ban-page__main_container {
           display: flex;
           justify-content: center;
@@ -267,13 +304,14 @@ a {
           text-align: center;
           width: 91%;
           max-width: 605px;
-
-          .ban-page__input::placeholder {
+          .ban-page__input {
             color: white;
             font-style: normal;
             font-weight: 400;
-            font-size: 16.1972px;
+            font-size: 16.1972px !important;
             line-height: 20px;
+          }
+          .ban-page__input::placeholder {
           }
           .ban-page__input_button {
             box-shadow: none;
@@ -297,7 +335,6 @@ a {
         }
       }
       .ban-page__art-area {
-        padding-top: 346px;
         .ban-page__art-area_container {
           position: relative;
           display: flex;

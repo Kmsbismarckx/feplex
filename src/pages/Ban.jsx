@@ -46,7 +46,16 @@ const Ban = () => {
                 placeholder="Введите Ban ID"
               />
               <Link to={""}>
-                <Button className="ban-page__input_button input__button">
+                <Button
+                  className="ban-page__input_button input__button"
+                  onClick={() => {
+                    setNickname(value);
+                    localStorage.setItem("nick-banned", value);
+                    if (nickname) {
+                      setModal(true);
+                    }
+                  }}
+                >
                   <img
                     onClick={() => {
                       setNickname(value);

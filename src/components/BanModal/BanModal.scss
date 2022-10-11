@@ -10,9 +10,24 @@
   justify-content: center;
   align-items: center;
 }
+.ban-modal__input_wrapper1::before {
+  display: none;
+}
+
+.ban-modal__input_wrapper2::after {
+  content: "";
+  background: url("/public/media/input-arrow.svg") no-repeat center;
+  background-size: contain;
+  position: absolute;
+
+  top: 15.71px;
+  left: 25.21px;
+  width: 20.83px;
+  height: 18.75px;
+}
+
 .ban-modal__input_wrapper2::before {
-  content: url("/public/media/input-arrow.svg");
-  background: none;
+  display: none;
 }
 
 @media screen and (min-width: 1024px) {
@@ -20,5 +35,13 @@
     font-weight: 700;
     font-size: 16px;
     line-height: 20px;
+  }
+  .ban-modal__input_wrapper2::after {
+    display: block;
+    top: 24.87px;
+    left: 39.89px;
+    width: 32.97px;
+    height: 29.38px;
+    background-size: cover;
   }
 }

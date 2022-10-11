@@ -8,15 +8,13 @@ const ModalPayment = ({ isMobile, payments, setPayments }) => {
         {payments.map((item, index) => {
           if (index < 6) {
             return (
-              <img
+              <div
                 key={index}
                 className={`pay-modal__pay-variant ${
                   item.isSelected && "pay-modal__active"
                 }`}
-                src={item.src}
-                alt=""
                 onClick={() => setPayments(categoryActive(index, payments))}
-              />
+              ></div>
             );
           }
         })}
@@ -27,14 +25,12 @@ const ModalPayment = ({ isMobile, payments, setPayments }) => {
     <div className="pay-modal__pay-variants">
       {payments.map((item, index) => {
         return (
-          <img
+          <div
             className={`pay-modal__pay-variant ${
               item.isSelected && "pay-modal__active"
             }`}
-            src={item.src}
-            alt=""
             onClick={() => setPayments(categoryActive(index, payments))}
-          />
+          ></div>
         );
       })}
     </div>

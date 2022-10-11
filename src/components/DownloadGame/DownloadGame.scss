@@ -49,8 +49,12 @@
       .download-game__button {
         align-self: start;
 
-        padding: 18px 38px 18px 38px;
         color: white;
+
+        box-shadow: none;
+        button {
+          padding: 18px 38px 18px 38px;
+        }
 
         p {
           font-style: normal;

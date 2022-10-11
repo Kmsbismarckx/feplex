@@ -1,15 +1,27 @@
-import React from "react";
+import React, { useEffect, useMemo } from "react";
 import Button from "../UI/Button/Button";
 import "./DonationItem.css";
 
 const DonationItem = ({ className, item, children, setModal }) => {
   let special = item.specialClass || "";
 
+  let specialNick = useMemo(() => {
+    if (children.isSpecial) {
+      return children.value.split(" ");
+    }
+  }, []);
+
   return (
     <div className={className + " " + special}>
       <div className={`${className}_header`}>
         <img className={`${className}_header_img`} src={item.imgSrc} alt="" />
-        <p data-text={item.dataText}>{children}</p>
+        {children.isSpecial ? (
+          <p>
+            {specialNick[0]} <span>{specialNick[1]}</span>
+          </p>
+        ) : (
+          <p>{children.value}</p>
+        )}
       </div>
       <div style={{ display: "flex", justifyContent: "center" }}>
         <hr className="line" width={270} noshade="true" />

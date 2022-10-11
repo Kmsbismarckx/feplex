@@ -39,6 +39,7 @@
 .online-info .online-info__button {
   width: 400px;
   height: 91px;
+  box-shadow: none;
 }
 .online-info .online-info__button .button__text {
   font-style: normal;

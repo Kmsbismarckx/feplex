@@ -24,6 +24,7 @@ const Main = () => {
         imgSrc: "/media/donation-header-item4.png",
         value: `MVP KING`,
         dataText: "KING",
+        isSpecial: true,
         specialClass: "donation-special",
       },
     ],
@@ -35,6 +36,7 @@ const Main = () => {
         imgSrc: "/media/donation-keys-item4.png",
         value: `MVP KING`,
         dataText: "KING",
+        isSpecial: true,
         specialClass: "donation-special",
       },
     ],
@@ -99,7 +101,7 @@ const Main = () => {
           />
         )}
         {isMobile ? (
-          <Subscribe />
+          <Subscribe chestWidth={274} chestHeight={306} />
         ) : (
           <Subscribe chestWidth={440} chestHeight={491} />
         )}
@@ -137,7 +139,7 @@ const Main = () => {
         />
       )}
       {isMobile ? (
-        <Subscribe />
+        <Subscribe chestWidth={274} chestHeight={306} />
       ) : (
         <Subscribe chestWidth={440} chestHeight={491} />
       )}

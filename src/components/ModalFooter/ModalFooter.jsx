@@ -7,9 +7,10 @@ const ModalFooter = () => {
     <div className={"pay-modal__footer"}>
       <div className={"modal__footer_checkbox-area"}>
         <Checkbox className="modal__footer_checkbox" />
-        <p>
+        <p style={{ whiteSpace: "nowrap" }}>
           Согласен с{" "}
-          <span style={{ color: "rgba(251, 164, 84, 1)" }}>правилами</span>{" "}
+          <span style={{ color: "rgba(251, 164, 84, 1)" }}>правилами</span>
+          <br />
           проекта Feplex
         </p>
       </div>

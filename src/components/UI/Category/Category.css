@@ -2,10 +2,11 @@
 .category {
   border: 3px solid #572611;
   border-radius: 36px;
-  padding: 12px 16px;
+  padding: 9px 13px;
   font-weight: 700;
   font-size: 12.0206px;
   line-height: 15px;
+  cursor: pointer;
 }
 
 .active {
@@ -17,7 +18,7 @@
   .category {
     border: 5px solid #572611;
     border-radius: 36px;
-    padding: 20px 26px;
+    padding: 15px 21px;
     font-style: normal;
     font-weight: 700;
     font-size: 20px;

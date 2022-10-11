@@ -7,16 +7,19 @@ import { Link } from "react-router-dom";
 
 const Header = () => {
   const { isVisible, setIsVisible, isMobile } = useContext(globalContext);
+  const [headerBackground, setBackground] = useState("");
 
   useEffect(() => {
     if (!isMobile) {
       setIsVisible(false);
+      setBackground("header__active");
     }
-  }, [isMobile]);
+    console.log(headerBackground);
+  }, [isMobile, isVisible]);
 
   return (
-    <div className="container">
-      <div className="header">
+    <div className="header__container">
+      <div className={`header ${headerBackground}`}>
         <Link
           to={"/"}
           onClick={() => {

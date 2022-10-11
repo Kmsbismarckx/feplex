@@ -8,6 +8,7 @@
 body {
   background: linear-gradient(180deg, #c18e08 0%, #bd570e 100%);
   font-family: "Montserrat", sans-serif;
+  overflow: hidden;
 }
 
 a {
@@ -25,6 +26,9 @@ a {
   100% {
     background: url("/public/media/pc-sword1.png") no-repeat top -48px right 154px, url("/public/media/pc-sword2.png") no-repeat top 216px left 43px, url("/public/media/pc-sword-blur.png") no-repeat top 757px right 41px, url("/public/media/pc-background1.png") no-repeat top 328px right 41px, url("/public/media/background2.png") no-repeat top 531px left -296px;
   }
+}
+.App {
+  overflow-x: hidden;
 }
 .App .general {
   margin-top: 70px;
@@ -59,10 +63,11 @@ a {
   padding-top: 70.45px;
   padding-bottom: 68px;
 }
-.App .start .choose-server .container {
+.App .start .choose-server .choose-server__container {
   width: 83%;
+  margin: 0 auto;
 }
-.App .start .choose-server .container .choose-server__name {
+.App .start .choose-server .choose-server__container .choose-server__name {
   font-style: normal;
   font-weight: 600;
   font-size: 24px;
@@ -78,9 +83,11 @@ a {
   background: url("/public/media/ban-page-background-bricks.png") no-repeat bottom -5px center, url("/public/media/ban-page-background-large.png") no-repeat center;
   background-size: contain, cover;
 }
-.App .ban-page .header {
+.App .ban-page .header__container {
+  background: linear-gradient(90deg, #fca554 70.97%, rgba(237, 137, 45, 0) 166.37%);
+}
+.App .ban-page .header__container .header {
   margin-top: 0;
-  margin-bottom: 59px;
 }
 .App .ban-page .ban-page__main {
   display: flex;
@@ -88,7 +95,6 @@ a {
   max-width: 1160px;
   margin: 0 auto;
   flex-direction: column;
-  padding-bottom: 135px;
 }
 .App .ban-page .ban-page__main .ban-page__main_container {
   display: flex;
@@ -97,6 +103,7 @@ a {
   align-self: end;
   flex-direction: column;
   width: 575px;
+  margin-top: 143.82px;
 }
 .App .ban-page .ban-page__main .ban-page__main_container .ban-page__main_name {
   font-size: 32px;
@@ -114,9 +121,15 @@ a {
   max-width: 433px;
   height: 71.1px;
   box-shadow: none;
+  background: transparent;
 }
 .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper .ban-page__input {
-  color: white;
+  padding-left: 97.37px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18.0665px;
+  line-height: 22px;
+  color: #ffffff;
 }
 .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper .ban-page__input_button {
   width: 71.73px;
@@ -131,18 +144,26 @@ a {
   line-height: 22px;
 }
 .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper::before {
-  content: url("/public/media/man-icon.svg");
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  content: "";
   position: absolute;
-  width: 60.71px;
+  width: 78.49px;
   height: 100%;
   top: 0;
   left: 0;
   background: #532410;
-  border-bottom-left-radius: 34.9334px;
-  border-top-left-radius: 34.9334px;
+  border: none;
+  border-bottom-left-radius: inherit;
+  border-top-left-radius: inherit;
+}
+.App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper::after {
+  top: 21.22px;
+  left: 32.25px;
+  content: "";
+  position: absolute;
+  background: url("/public/media/man-icon.svg") no-repeat center;
+  background-size: cover;
+  width: 23.7px;
+  height: 29.62px;
 }
 .App .ban-page .ban-page__art-area {
   padding-top: 162px;
@@ -172,6 +193,11 @@ a {
   left: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .App .ban-page .ban-page__art-area {
+    padding-top: 346px;
+  }
+}
 @media screen and (max-width: 1024px) {
   .App .general {
     background: url("/public/media/sword1.png") no-repeat right top 238px, url("/public/media/sword-blur.png") no-repeat left top 500px, url("/public/media/background1.png") no-repeat center top 347px, none;
@@ -213,20 +239,23 @@ a {
   .App .ban-page .ban-page__wrapper {
     padding-top: 35px;
     padding-bottom: 134px;
-    max-height: 508px;
     background: url("/public/media/ban-page-background-small.png") no-repeat center;
     background-size: cover;
   }
   .App .ban-page .header {
     margin-top: 0;
-    margin-bottom: 59px;
+    margin-bottom: 0;
   }
   .App .ban-page .ban-page__main {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding-bottom: 135px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16.1972px;
+    line-height: 20px;
+    color: #ffffff;
   }
   .App .ban-page .ban-page__main .ban-page__main_container {
     display: flex;
@@ -238,11 +267,11 @@ a {
     width: 91%;
     max-width: 605px;
   }
-  .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input::placeholder {
+  .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input {
     color: white;
     font-style: normal;
     font-weight: 400;
-    font-size: 16.1972px;
+    font-size: 16.1972px !important;
     line-height: 20px;
   }
   .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_button {
@@ -263,9 +292,6 @@ a {
   .App .ban-page .ban-page__main .ban-page__main_container .ban-page__input_wrapper {
     max-width: 433px;
     box-shadow: none;
-  }
-  .App .ban-page .ban-page__art-area {
-    padding-top: 346px;
   }
   .App .ban-page .ban-page__art-area .ban-page__art-area_container {
     position: relative;

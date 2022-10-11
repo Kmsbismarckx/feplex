@@ -51,7 +51,7 @@ const Start = () => {
       <DownloadGame className={"download-game"} />
       <DownloadGameList startItems={startItems} isMobile={isMobile} />
       <div className={"choose-server"}>
-        <div className={"container"}>
+        <div className={"choose-server__container"}>
           <h1 className={"choose-server__name"}>
             Как добавить сервер вручную?
           </h1>

@@ -8,10 +8,13 @@
   display: flex;
   flex-direction: column;
   max-width: 1160px;
+  margin: 0 auto;
 }
 .welcome .welcome__button {
   width: 400.84px;
   height: 91.45px;
+}
+.welcome .welcome__button button {
   display: flex;
   justify-content: center;
   align-items: center;
