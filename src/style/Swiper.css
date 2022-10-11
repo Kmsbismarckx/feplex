@@ -1,0 +1,13 @@
+.donation-pc__footer .customSwiper {
+  height: 400px;
+  max-width: 328px;
+  width: 100%;
+}
+.donation-pc__footer .customSwiper .customSlide {
+  height: 100%;
+}
+.donation-pc__footer .customSwiper .swiper-pagination {
+  display: none;
+}
+
+/*# sourceMappingURL=Swiper.css.map */
