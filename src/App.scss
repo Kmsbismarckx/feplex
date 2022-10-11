@@ -78,7 +78,7 @@ a {
       padding-top: 70.45px;
       padding-bottom: 68px;
       .choose-server__container {
-        width: 1160px;
+        max-width: 1160px;
         margin: 0 auto;
         .choose-server__name {
           font-style: normal;
@@ -255,9 +255,11 @@ a {
       .choose-server {
         background: #4a2110;
         padding-top: 32px;
-        .container {
+        .choose-server__container {
           width: 83%;
           .choose-server__name {
+            width: 354px;
+
             font-style: normal;
             font-weight: 600;
             font-size: 24px;

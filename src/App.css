@@ -64,7 +64,7 @@ a {
   padding-bottom: 68px;
 }
 .App .start .choose-server .choose-server__container {
-  width: 1160px;
+  max-width: 1160px;
   margin: 0 auto;
 }
 .App .start .choose-server .choose-server__container .choose-server__name {
@@ -222,10 +222,11 @@ a {
     background: #4a2110;
     padding-top: 32px;
   }
-  .App .start .choose-server .container {
+  .App .start .choose-server .choose-server__container {
     width: 83%;
   }
-  .App .start .choose-server .container .choose-server__name {
+  .App .start .choose-server .choose-server__container .choose-server__name {
+    width: 354px;
     font-style: normal;
     font-weight: 600;
     font-size: 24px;

@@ -52,14 +52,16 @@ const Start = () => {
       <DownloadGameList startItems={startItems} isMobile={isMobile} />
       <div className={"choose-server"}>
         <div className={"choose-server__container"}>
-          <h1 className={"choose-server__name"}>
-            Как добавить сервер вручную?
-          </h1>
-          <ChooseServerList
-            className={"choose-server__list"}
-            serverItems={serverItems}
-            isMobile={isMobile}
-          />
+          <div>
+            <h1 className={"choose-server__name"}>
+              Как добавить сервер вручную?
+            </h1>
+            <ChooseServerList
+              className={"choose-server__list"}
+              serverItems={serverItems}
+              isMobile={isMobile}
+            />
+          </div>
         </div>
       </div>
       <Footer />

@@ -1,14 +1,29 @@
-	@import "../../style/variables.css";
-
-.choose-server__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+@import "../../style/variables.css";
+.choose-server__container {
+  margin-right: 10px;
+  margin-left: 10px;
 }
+.choose-server__list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 354px);
 
+  justify-content: center;
+  grid-auto-flow: row;
+  column-gap: 58.41px;
+  row-gap: 42.85px;
+
+  width: 100%;
+}
+@media screen and (max-width: 1180px) {
+  .choose-server__container {
+    margin: 0 auto;
+  }
+}
 @media screen and (min-width: 1024px) {
   .choose-server__list {
     justify-content: space-between;
+    grid-template-columns: repeat(auto-fill, 310px);
+
     flex-direction: row;
     flex-wrap: wrap;
   }
