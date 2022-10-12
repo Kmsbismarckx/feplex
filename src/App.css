@@ -170,9 +170,9 @@ a {
   display: flex;
   justify-content: center;
   position: relative;
-  -webkit-box-shadow: 0px 31px 10px -4px rgba(0, 0, 0, 0.41) inset;
-  -moz-box-shadow: 0px 31px 10px -4px rgba(0, 0, 0, 0.41) inset;
-  box-shadow: 0px 31px 10px -4px rgba(0, 0, 0, 0.41) inset;
+  -webkit-box-shadow: 0 31px 10px -4px rgba(0, 0, 0, 0.41) inset;
+  -moz-box-shadow: 0 31px 10px -4px rgba(0, 0, 0, 0.41) inset;
+  box-shadow: 0 31px 10px -4px rgba(0, 0, 0, 0.41) inset;
 }
 .App .ban-page .ban-page__art-area .ban-page__art-area_container {
   position: relative;
@@ -188,6 +188,7 @@ a {
   position: absolute;
   bottom: 74px;
   left: 76px;
+  pointer-events: none;
 }
 .App .ban-page .ban-page__art-area .ban-page__background-bricks {
   width: 100%;

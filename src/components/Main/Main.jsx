@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useState } from "react";
 import Welcome from "../Welcome/Welcome";
 import Donation from "../Donation/Donation";
 import "./Main.css";
@@ -73,8 +73,6 @@ const Main = () => {
   const { isMobile, isHD } = useContext(globalContext);
   const { nick } = useParams();
   useModalScroll(modal);
-
-  console.log(value);
 
   if (nick) {
     return (

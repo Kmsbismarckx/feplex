@@ -6,6 +6,7 @@ import Category from "../UI/Category/Category";
 import { categoryActive } from "../../functions/categoryActive";
 import ModalPayment from "../ModalPayment/ModalPayment";
 import ModalFooter from "../ModalFooter/ModalFooter";
+import { useCheckboxHandler } from "../../hooks/useCheckboxHandler";
 
 const PayModal = ({ setModal, isMobile, nickname }) => {
   const rootClasses = ["pay-modal"];
@@ -25,6 +26,10 @@ const PayModal = ({ setModal, isMobile, nickname }) => {
     { src: "/media/pay-variant.png", isSelected: false },
     { src: "/media/pay-variant.png", isSelected: false },
   ]);
+  const [isChecked, setIsChecked] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
+  useCheckboxHandler(isChecked, setButtonDisabled);
 
   return (
     <div
@@ -133,7 +138,12 @@ const PayModal = ({ setModal, isMobile, nickname }) => {
               />
             </div>
           </div>
-          <ModalFooter />
+          <ModalFooter
+            isChecked={isChecked}
+            setIsChecked={setIsChecked}
+            buttonDisabled={buttonDisabled}
+            setButtonDisabled={setButtonDisabled}
+          />
         </div>
       </div>
     </div>

@@ -6,6 +6,7 @@ import "./BanModal.css";
 import Input from "../UI/Input/Input";
 import ModalPayment from "../ModalPayment/ModalPayment";
 import ModalFooter from "../ModalFooter/ModalFooter";
+import { useCheckboxHandler } from "../../hooks/useCheckboxHandler";
 
 const BanModal = ({ setModal, isMobile, nickname }) => {
   const [payments, setPayments] = useState([
@@ -18,6 +19,10 @@ const BanModal = ({ setModal, isMobile, nickname }) => {
     { src: "/media/pay-variant.png", isSelected: false },
     { src: "/media/pay-variant.png", isSelected: false },
   ]);
+  const [isChecked, setIsChecked] = useState(false);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
+
+  useCheckboxHandler(isChecked, setButtonDisabled);
 
   return (
     <div
@@ -102,7 +107,12 @@ const BanModal = ({ setModal, isMobile, nickname }) => {
               />
             </div>
           </div>
-          <ModalFooter />
+          <ModalFooter
+            isChecked={isChecked}
+            setIsChecked={setIsChecked}
+            buttonDisabled={buttonDisabled}
+            setButtonDisabled={setButtonDisabled}
+          />
         </div>
       </div>
     </div>

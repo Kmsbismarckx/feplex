@@ -1,10 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import "./DonationPC.css";
 import DonationItem from "../DonationItem/DonationItem";
 import { useParams } from "react-router-dom";
 import DonationHeader from "../DonationHeader/DonationHeader";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper";
-import { Swiper, SwiperSlide, useSwiper } from "swiper/react";
+import { Navigation, Pagination } from "swiper";
+import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -88,7 +88,6 @@ const DonationPc = ({
         ) : (
           <div className="donation-pc__footer">
             {donationItems.map((item) => {
-              console.log(item);
               return (
                 <DonationItem
                   className={"donation-pc__footer_item"}
