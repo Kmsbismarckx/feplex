@@ -66,8 +66,6 @@
     flex-direction: column;
   }
   .footer .container .contact-info {
-    margin-left: auto;
-    margin-right: auto;
     align-self: start;
   }
   .footer .footer__down {
@@ -92,8 +90,6 @@
     font-weight: 400;
     font-size: 13.5335px;
     line-height: 150.84%;
-    margin-left: auto;
-    margin-right: auto;
     color: #9a9a9a;
     order: 1;
   }
