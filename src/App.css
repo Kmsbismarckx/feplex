@@ -5,16 +5,10 @@
   box-sizing: border-box;
 }
 
-html {
-  height: -webkit-fill-available;
-}
-
 body {
   background: linear-gradient(180deg, #c18e08 0%, #bd570e 100%);
   font-family: "Montserrat", sans-serif;
-  height: -webkit-fill-available;
-  padding-bottom: env(safe-area-inset-bottom);
-  padding-top: env(safe-area-inset-top);
+  -webkit-text-size-adjust: none;
 }
 
 a {
