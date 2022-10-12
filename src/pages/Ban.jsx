@@ -79,7 +79,7 @@ const Ban = () => {
         {!isMobile && (
           <img
             className={"ban-page__background-bricks"}
-            src="/media/ban-page-background-bricks.png"
+            src="/media/ban-page-background-front-bricks.png"
             alt=""
           />
         )}
