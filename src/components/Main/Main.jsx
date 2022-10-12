@@ -72,7 +72,6 @@ const Main = () => {
 
   const { isMobile, isHD } = useContext(globalContext);
   const { nick } = useParams();
-
   useModalScroll(modal);
 
   if (nick) {
