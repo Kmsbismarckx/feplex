@@ -8,7 +8,6 @@ import ModalPayment from "../ModalPayment/ModalPayment";
 import ModalFooter from "../ModalFooter/ModalFooter";
 
 const BanModal = ({ setModal, isMobile, nickname }) => {
-  const rootClasses = ["pay-modal"];
   const [payments, setPayments] = useState([
     { src: "/media/pay-variant.png", isSelected: true },
     { src: "/media/pay-variant.png", isSelected: false },
@@ -22,7 +21,7 @@ const BanModal = ({ setModal, isMobile, nickname }) => {
 
   return (
     <div
-      className={rootClasses.join(" ")}
+      className={"pay-modal"}
       onClick={() => {
         setModal(false);
       }}

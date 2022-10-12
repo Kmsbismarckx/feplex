@@ -83,7 +83,7 @@
     position: relative;
     padding-top: 0;
     padding-bottom: 61.3px;
-    background: url("/public/media/subscribe-item5.png") no-repeat top 324.97px right, url("/public/media/subscribe-item4.png") no-repeat top left, url("/public/media/subscribe-item6.png") no-repeat top right;
+    background: url("/public/media/subscribe-item5.png") no-repeat bottom -58.3px right, url("/public/media/subscribe-item4.png") no-repeat top left, url("/public/media/subscribe-item6.png") no-repeat top right;
     background-size: auto, auto, auto, auto, auto;
   }
   .subscribe .container {

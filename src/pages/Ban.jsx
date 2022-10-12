@@ -45,30 +45,18 @@ const Ban = () => {
                 type="text"
                 placeholder="Введите Ban ID"
               />
-              <Link to={""}>
-                <Button
-                  className="ban-page__input_button input__button"
-                  onClick={() => {
-                    setNickname(value);
-                    localStorage.setItem("nick-banned", value);
-                    if (nickname) {
-                      setModal(true);
-                    }
-                  }}
-                >
-                  <img
-                    onClick={() => {
-                      setNickname(value);
-                      localStorage.setItem("nick-banned", value);
-                      if (nickname) {
-                        setModal(true);
-                      }
-                    }}
-                    src="/media/input-button-arrow.svg"
-                    alt=""
-                  />
-                </Button>
-              </Link>
+              <Button
+                className="ban-page__input_button input__button"
+                onClick={() => {
+                  setNickname(value);
+                  localStorage.setItem("nick-banned", value);
+                  if (nickname) {
+                    setModal(true);
+                  }
+                }}
+              >
+                <img src="/media/input-button-arrow.svg" alt="" />
+              </Button>
             </div>
           </div>
         </div>
