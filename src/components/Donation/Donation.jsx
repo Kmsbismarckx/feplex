@@ -1,13 +1,16 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import "./Donation.css";
 import Button from "../UI/Button/Button";
 import Input from "../UI/Input/Input";
 import { Link, useParams } from "react-router-dom";
+import { useButtonDisableHandler } from "../../hooks/useButtonDisableHandler";
 
 const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
   const { nick } = useParams();
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
-  console.log(nickname);
+  useButtonDisableHandler(value, setButtonDisabled);
+
   return (
     <div className="donation-container">
       <div className="donation">
@@ -26,7 +29,6 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
               pattern={"[A-Za-zА-Яа-яЁё]{6,}"}
               onChange={(e) => {
                 setValue(e.target.value);
-                console.log(e.target.value);
               }}
               className="donation__input input"
               type="text"
@@ -40,10 +42,11 @@ const Donation = ({ isMobile, value, setValue, nickname, setNickname }) => {
             <Link className={"button__link"} to={`/general/${value}`}>
               <Button
                 className="donation__input_button input__button"
-                onClick={() => {
-                  localStorage.setItem("nick", value);
+                onClick={(e) => {
                   setNickname(value);
+                  localStorage.setItem("nick", value);
                 }}
+                disabled={buttonDisabled}
               ></Button>
             </Link>
           </div>

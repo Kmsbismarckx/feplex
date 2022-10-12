@@ -7,6 +7,7 @@ import Button from "../components/UI/Button/Button";
 import BanModal from "../components/BanModal/BanModal";
 import { globalContext } from "../context";
 import { useModalScroll } from "../hooks/useModalScroll";
+import { useButtonDisableHandler } from "../hooks/useButtonDisableHandler";
 
 const Ban = () => {
   const [value, setValue] = useState("");
@@ -15,8 +16,19 @@ const Ban = () => {
   );
   const [modal, setModal] = useState(false);
   const { isMobile } = useContext(globalContext);
+  const [buttonDisabled, setButtonDisabled] = useState(true);
 
+  useButtonDisableHandler(value, setButtonDisabled);
   useModalScroll(modal);
+
+  const buttonOnClickHandler = () => {
+    setNickname(value);
+    localStorage.setItem("nick-banned", value);
+    if (nickname) {
+      setModal(true);
+    }
+  };
+
   return (
     <div className={"ban-page"}>
       <div className="ban-page__wrapper">
@@ -47,13 +59,8 @@ const Ban = () => {
               />
               <Button
                 className="ban-page__input_button input__button"
-                onClick={() => {
-                  setNickname(value);
-                  localStorage.setItem("nick-banned", value);
-                  if (nickname) {
-                    setModal(true);
-                  }
-                }}
+                onClick={buttonOnClickHandler}
+                disabled={buttonDisabled}
               >
                 <img src="/media/input-button-arrow.svg" alt="" />
               </Button>

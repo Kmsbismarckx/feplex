@@ -14,7 +14,6 @@ const Header = () => {
       setIsVisible(false);
       setBackground("header__active");
     }
-    console.log(headerBackground);
   }, [isMobile, isVisible]);
 
   return (

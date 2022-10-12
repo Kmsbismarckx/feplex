@@ -74,6 +74,8 @@ const Main = () => {
   const { nick } = useParams();
   useModalScroll(modal);
 
+  console.log(value);
+
   if (nick) {
     return (
       <div className="main">
