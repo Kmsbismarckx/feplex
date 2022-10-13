@@ -291,6 +291,9 @@
     padding-top: 27.9px;
     padding-left: 15.83px;
     padding-right: 15.83px;
+    &__container {
+      height: 90vh;
+    }
     .pay-modal__content {
       display: flex;
       flex-direction: column;

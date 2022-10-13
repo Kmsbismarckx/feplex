@@ -9,15 +9,12 @@ const Slider = ({ children, currentPage, setCurrentPage }) => {
     setPressed(true);
     setStartX(e.clientX);
     this.style.cursor = "grabbing";
-
-    console.log(startX);
   };
 
   useEffect(() => {
     window.addEventListener("mouseup", function (e) {
       setPressed(false);
       window.style.cursor = "grab";
-      console.log(1);
     });
   }, [pressed]);
 

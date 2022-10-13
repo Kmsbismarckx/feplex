@@ -3,8 +3,6 @@ import Checkbox from "../UI/Checkbox/Checkbox";
 import Button from "../UI/Button/Button";
 
 const ModalFooter = ({ isChecked, setIsChecked, buttonDisabled }) => {
-  console.log(buttonDisabled);
-
   return (
     <div className={"pay-modal__footer"}>
       <div className={"modal__footer_checkbox-area"}>
