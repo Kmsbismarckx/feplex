@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/feplex/static/css/main.d4aaf54d.css",
-    "main.js": "/feplex/static/js/main.ba9e5299.js",
+    "main.js": "/feplex/static/js/main.14ed89a4.js",
     "static/media/ban-page-background-large.png": "/feplex/static/media/ban-page-background-large.c0f54858c93b7d0d373f.png",
     "static/media/pc-background1.png": "/feplex/static/media/pc-background1.6ff3cc38343f894e6f2e.png",
     "static/media/background2.png": "/feplex/static/media/background2.d44ff29c4f5445a8643a.png",
@@ -28,10 +28,10 @@
     "static/media/man-icon.svg": "/feplex/static/media/man-icon.8b86167db55f947c0f82.svg",
     "static/media/green-dot.svg": "/feplex/static/media/green-dot.ad7a16c06092ed1af5a5.svg",
     "main.d4aaf54d.css.map": "/feplex/static/css/main.d4aaf54d.css.map",
-    "main.ba9e5299.js.map": "/feplex/static/js/main.ba9e5299.js.map"
+    "main.14ed89a4.js.map": "/feplex/static/js/main.14ed89a4.js.map"
   },
   "entrypoints": [
     "static/css/main.d4aaf54d.css",
-    "static/js/main.ba9e5299.js"
+    "static/js/main.14ed89a4.js"
   ]
 }
